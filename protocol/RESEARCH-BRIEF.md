@@ -12,20 +12,20 @@ What decision changes if we learn the answer?
 
 List relevant papers, prior runs, observations, and known unknowns. Separate direct evidence from assumptions.
 
-## System under study
+## Research context
 
-- Repository or artifact:
-- Dataset or environment:
-- Hardware and time available:
-- Relevant files:
+- Discipline or community:
+- Object, population, system, text, archive, phenomenon, or body of work:
+- Available sources, evidence, materials, data, tools, or access:
+- Time, resources, ethical obligations, and other constraints:
 
-## Baseline
+## Current point of comparison
 
-What is the current behavior or result, and how was it measured?
+What prior account, theory, interpretation, observation, result, practice, or baseline is relevant? Write “not applicable” when the question does not require one.
 
-## Success metric
+## Standard of evidence
 
-Name one primary metric, its direction, and the smallest meaningful difference.
+What kind of evidence or argument would count as progress in this field? Include a metric only when the question genuinely calls for one.
 
 ## Constraints
 

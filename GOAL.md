@@ -2,41 +2,41 @@
 
 ## One sentence
 
-Open Discovery helps a researcher turn one uncertain question into the next trustworthy experiment, then preserves what was learned.
+Open Discovery helps any researcher turn one uncertain question into the next trustworthy research step, then preserves what was learned.
 
 ## First user
 
-A researcher with:
+A researcher in any discipline with:
 
 - a concrete question;
-- an existing codebase, dataset, simulation, or measurable system;
-- limited time or compute;
-- uncertainty about the best next experiment.
+- knowledge of why that question matters;
+- evidence, sources, observations, materials, data, or arguments—or a need to obtain them;
+- uncertainty about the best next research step.
 
 ## Version-zero promise
 
-Given a research question and its working context, Open Discovery produces one reviewable experiment brief containing:
+Given a research question and its context, Open Discovery produces one reviewable research brief containing:
 
 1. the question and current evidence;
-2. the baseline to beat;
-3. one falsifiable hypothesis;
-4. the smallest decisive experiment;
-5. the metric, controls, budget, and stopping rule;
-6. the exact artifacts needed for reproduction;
-7. an honest verdict and recommended next step after the run.
+2. what is known, assumed, disputed, and unknown;
+3. the kind of inquiry the question requires;
+4. one justified next research step;
+5. the relevant method, sources, standards of evidence, constraints, and stopping rule;
+6. the records and artifacts needed for scrutiny or reproduction where applicable;
+7. an honest interpretation and recommended next step.
 
 ## Success criterion
 
-A researcher says: **“That is the experiment I should run next, and I trust the record enough to build on it.”**
+A researcher says: **“That is the research step I should take next, and I trust the record enough to build on it.”**
 
 ## Not yet
 
 - a fully autonomous scientist;
 - a general paper-writing agent;
 - a dashboard containing many unverified ideas;
-- an expensive parallel experiment farm;
+- an expensive system that launches work without researcher judgment;
 - a system that makes scientific claims without researcher review.
 
-## Product wedge
+## Scope
 
-Start with computational research because questions, code, metrics, and outputs can be inspected and reproduced. Machine-learning research is the first likely domain, but the protocol should not assume that every project is ML.
+Open Discovery is for all legitimate research disciplines and methods. It must not assume that a valid question has code, a numerical metric, a controlled experiment, or a laboratory. Rigor is defined with the researcher and the standards of the relevant field.

@@ -1,24 +1,25 @@
-# Experiment Result
+# Research Record
 
-## What ran
+## What was done
 
 - Date:
-- Commit/environment:
-- Data version:
-- Command:
+- Method:
+- Sources, participants, materials, data, or objects:
+- Relevant versions, provenance, environment, or context:
+- Procedure:
 - Runtime and cost:
 
 ## Result
 
-Record the primary metric first, followed by diagnostics.
+Record the evidence, argument, observation, interpretation, or measured result in the form appropriate to the field.
 
 ## Verdict
 
-Choose one: **supported / not supported / inconclusive / confounded / failed to execute**.
+State the most accurate interpretation. Do not force every result into a fixed experimental verdict.
 
 ## Evidence
 
-Link the raw outputs, logs, plots, configs, and code revision.
+Link or cite the sources, notes, records, artifacts, derivations, outputs, transcripts, data, logs, images, and code needed to scrutinize the work.
 
 ## What changed in our belief?
 
@@ -26,7 +27,7 @@ State what the result establishes and what it does not establish.
 
 ## Next step
 
-Recommend one action: stop, replicate, add a control, scale up, revise the hypothesis, or investigate a new question.
+Recommend one action appropriate to the inquiry: stop, verify, replicate, seek another source, add a comparison, gather more evidence, revise the interpretation, or investigate a new question.
 
 ## Researcher review
 
