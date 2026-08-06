@@ -6,9 +6,15 @@ The long-term idea is similar to Discovery Loop: build systems that automate the
 
 > propose an experiment → implement and run it → examine the result → learn → try the next experiment
 
+## Goal
+
+Help a researcher turn one uncertain question into the next trustworthy experiment, then preserve what was learned.
+
+Open Discovery is not trying to replace scientific judgment. It should remove the repetitive work around turning a question into a controlled, reproducible test.
+
 ## First goal
 
-Talk to researchers before deciding exactly what to build.
+Use the smallest version ourselves while talking to researchers. The first version captures a question, establishes a baseline, proposes one cheap decisive experiment, records the outcome, and recommends what to do next.
 
 We want to learn:
 
@@ -32,7 +38,7 @@ Open Discovery may eventually help researchers:
 8. decide what to investigate next;
 9. produce a clear, reviewable research report.
 
-The exact product is intentionally undecided. Research conversations come first.
+The long-term product is intentionally undecided. We will earn it by completing real loops and talking to researchers.
 
 ## Principles
 
@@ -43,9 +49,15 @@ The exact product is intentionally undecided. Research conversations come first.
 - Open protocols and reproducible artifacts matter more than impressive demos.
 - Start with the smallest useful experiment and earn the right to automate more.
 
+## Start here
+
+- [`GOAL.md`](GOAL.md) — the product contract
+- [`FIRST-CUSTOMER.md`](FIRST-CUSTOMER.md) — how we dogfood it
+- [`protocol/`](protocol/) — the version-zero research loop
+
 ## Status
 
-Early discovery. This repository currently contains the project direction and will grow from conversations with researchers.
+Version zero: a testable research protocol, ready for its first real loop.
 
 ## Background
 
