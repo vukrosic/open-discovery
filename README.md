@@ -8,7 +8,7 @@ Open Discovery is an open project for helping researchers in every field move fr
 
 This is our main strategy too.
 
-The long-term idea is similar to Discovery Loop, expanded across all research: build tools that support the repetitive work between a question, an appropriate method, evidence, interpretation, and the next question.
+The long-term idea is similar to Discovery Loop, expanded across all research: automate the repetitive loop between a question, an appropriate method, evidence, interpretation, and the next question. Discovery Loop argues that this approach can help with important subproblems across nearly all fourteen U.S. National Academy of Engineering Grand Challenges; Open Discovery extends the ambition beyond ML and experimental research to every legitimate research discipline and method.
 
 > ask → understand what is known → choose a method → gather or derive evidence → evaluate → learn → ask again
 
