@@ -63,6 +63,7 @@ The long-term product is intentionally undecided. We will earn it by completing 
 
 - [`GOAL.md`](GOAL.md) — the product contract
 - [`FIRST-CUSTOMER.md`](FIRST-CUSTOMER.md) — how we dogfood it
+- [`docs/COMMON-CYCLE.md`](docs/COMMON-CYCLE.md) — the recurring propose, run, and evaluate loop
 - [`protocol/`](protocol/) — the version-zero research loop
 
 ## Status
