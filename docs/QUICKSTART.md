@@ -42,6 +42,18 @@ Add the returned idea to `IDEAS.md` with status **Proposed**.
 The human then records **Approved**, **Rejected**, or **Parked**. Do not hide
 rejected ideas; they prevent repetition.
 
+## Choose the next loop
+
+- To map existing evidence, copy `templates/literature-review/` into a numbered
+  folder such as `reviews/REV-001/` and use
+  [`LITERATURE-REVIEW-PROMPT.md`](LITERATURE-REVIEW-PROMPT.md).
+- To execute an approved experiment, continue below or use
+  [`EXPERIMENT-LOOP-PROMPT.md`](EXPERIMENT-LOOP-PROMPT.md).
+
+A literature review and an experiment use the same `PROJECT.md`, `TASK-SPEC.md`,
+`IDEAS.md`, `PROGRESS.md`, `FINDINGS.md`, and `WORK-LOG.md`. They are two ways
+of updating one research memory.
+
 ## 4. Freeze the run
 
 For an approved idea:

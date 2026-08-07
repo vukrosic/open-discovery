@@ -11,6 +11,21 @@ The core loop is:
 
 > question → evidence → one next idea → approval → protocol → run → result → next question
 
+## Current product focus
+
+Open Discovery currently has two automation loops and one shared control layer:
+
+1. **Literature review loop:** search, screen, extract, compare, synthesize, and
+   identify the strongest unresolved gap.
+2. **Experiment loop:** propose, approve, freeze, run, evaluate, preserve the
+   result, and recommend one next experiment.
+3. **Research memory:** keep sources, protocols, evidence, negative results,
+   permissions, and the current strongest finding recoverable from files.
+
+The literature loop summarizes existing evidence. The experiment loop creates
+new evidence. The shared record prevents both loops from repeating work or
+quietly changing the question.
+
 ## What this release contains
 
 Version 0.1 is deliberately only Markdown files. There is no package, server,
@@ -23,8 +38,9 @@ The repository provides:
 - an idea ledger that separates proposed, approved, rejected, and parked work;
 - a progress record that makes the current state resumable;
 - experiment protocol and result templates;
+- literature-review specification, search, evidence, and synthesis templates;
 - append-only-style findings and work logs;
-- operating instructions for AI agents;
+- copy-paste operating prompts for AI-assisted reviews and experiments;
 - rules for evidence, negative results, pivots, and bounded autonomy.
 
 The files are the system. They can be read, reviewed, diffed, copied into any
@@ -65,6 +81,12 @@ If you are working with an AI agent, start with the copy-paste
 looks like, read the fully worked
 [`robust-summary example`](examples/robust-summary/README.md).
 
+After initialization, use the
+[`LITERATURE-REVIEW-PROMPT.md`](docs/LITERATURE-REVIEW-PROMPT.md) to map existing
+evidence or the
+[`EXPERIMENT-LOOP-PROMPT.md`](docs/EXPERIMENT-LOOP-PROMPT.md) after an
+experiment has been explicitly approved.
+
 Before starting real work, check
 [`SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md). It states which research
 workflows version 0.1 supports, which require additional institutional controls,
@@ -90,6 +112,14 @@ than the evidence.
 - [`docs/QUICKSTART.md`](docs/QUICKSTART.md) — first project walkthrough.
 - [`docs/KICKOFF-PROMPT.md`](docs/KICKOFF-PROMPT.md) — copy-paste prompt for
   initializing a project with an AI agent.
+- [`docs/PRODUCT-FOCUS.md`](docs/PRODUCT-FOCUS.md) — the two automation loops,
+  shared research memory, and near-term exclusions.
+- [`docs/LITERATURE-REVIEW-LOOP.md`](docs/LITERATURE-REVIEW-LOOP.md) — durable
+  source-search and synthesis workflow.
+- [`docs/LITERATURE-REVIEW-PROMPT.md`](docs/LITERATURE-REVIEW-PROMPT.md) —
+  copy-paste prompt for an AI-assisted review.
+- [`docs/EXPERIMENT-LOOP-PROMPT.md`](docs/EXPERIMENT-LOOP-PROMPT.md) —
+  copy-paste prompt for executing an approved experiment.
 - [`docs/HUMAN-AI-COLLABORATION.md`](docs/HUMAN-AI-COLLABORATION.md) — authority
   and responsibility model.
 - [`docs/AUTONOMOUS-LOOP.md`](docs/AUTONOMOUS-LOOP.md) — bounded repeated work.
@@ -101,6 +131,8 @@ than the evidence.
   — reusable prompt for recommending one next experiment.
 - [`protocol/`](protocol/) — general research intake and result protocol.
 - [`templates/`](templates/) — files to copy into each real project and run.
+- [`templates/literature-review/`](templates/literature-review/) — files for a
+  reproducible search, evidence table, and synthesis.
 - [`examples/robust-summary/`](examples/robust-summary/) — completed teaching
   project with a frozen protocol, transparent calculations, a negative result,
   and a next decision.
@@ -113,5 +145,5 @@ used to develop the method.
 
 ## Status
 
-Version 0.1: a release-ready Markdown contract for testing human–AI research
-collaboration on real projects.
+Version 0.1: operational Markdown contracts for AI-assisted literature review,
+approved experiment execution, and durable research memory.

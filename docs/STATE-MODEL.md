@@ -11,6 +11,12 @@ project-name/
 ├── FINDINGS.md
 ├── WORK-LOG.md
 ├── evidence/
+├── reviews/
+│   └── REV-001/
+│       ├── REVIEW-SPEC.md
+│       ├── SEARCH-LOG.md
+│       ├── EVIDENCE-TABLE.md
+│       └── SYNTHESIS.md
 └── runs/
     └── EXP-001/
         ├── PROTOCOL.md
@@ -32,6 +38,10 @@ artifacts belong to the project, not to this public harness repository.
 | Why did the project change direction? | `WORK-LOG.md` |
 | What was planned before a run? | `runs/<id>/PROTOCOL.md` |
 | What actually happened? | `runs/<id>/RESULT.md` |
+| What literature scope was frozen? | `reviews/<id>/REVIEW-SPEC.md` |
+| What searches and screening decisions occurred? | `reviews/<id>/SEARCH-LOG.md` |
+| Which source supports each extracted claim? | `reviews/<id>/EVIDENCE-TABLE.md` |
+| What does the reviewed evidence establish? | `reviews/<id>/SYNTHESIS.md` |
 
 ## Idea states
 
@@ -50,6 +60,11 @@ artifacts belong to the project, not to this public harness repository.
 - **Inconclusive:** the method ran but could not resolve the uncertainty.
 - **Successful:** it passed every frozen success criterion.
 
+Literature reviews use the same separation between **Proposed**, **Approved**,
+**Running**, and a terminal state. `SYNTHESIS.md` records whether the bounded
+review was **Completed**, **Inconclusive**, or **Blocked**; completion does not
+mean the literature is exhaustive.
+
 ## Project states
 
 - **Ready:** no run is active and a next decision can be made.
@@ -62,6 +77,8 @@ artifacts belong to the project, not to this public harness repository.
 
 - At most one run is active.
 - Every started run has a protocol and a result document.
+- Every started review has a frozen specification, search log, evidence table,
+  and synthesis document.
 - The progress document names the same active run as the idea ledger.
 - A finding links to evidence or states why no durable artifact exists.
 - The strongest result changes only after all written gates pass.

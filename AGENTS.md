@@ -14,7 +14,8 @@ Read, in order:
 5. `FINDINGS.md`
 6. the most recent entries in `WORK-LOG.md`
 
-Then inspect the protocol and evidence for any active run.
+Then inspect the protocol and evidence for any active experiment or literature
+review.
 
 ## Required behavior
 
@@ -42,6 +43,11 @@ Then inspect the protocol and evidence for any active run.
 13. Check `docs/SUPPORTED-RESEARCH.md` before execution. If the work requires
     controls that are not confirmed, is unsupported, or has unknown eligibility,
     stop at planning and return to the human.
+14. For literature reviews, freeze the review question, scope, source types,
+    search plan, and stopping rule before searching. Preserve exact queries,
+    dates, inclusion decisions, source identifiers, and access limits.
+15. Never invent a source, citation, quotation, search result, experiment, or
+    access claim. Mark unavailable evidence and unresolved uncertainty directly.
 
 ## Authority rule
 

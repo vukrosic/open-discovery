@@ -29,6 +29,16 @@ Given a research question and its context, Open Discovery produces one reviewabl
 
 A researcher says: **“That is the research step I should take next, and I trust the record enough to build on it.”**
 
+## Current build priority
+
+Version 0.1 focuses on:
+
+1. automating a reproducible literature-review loop;
+2. automating approved, bounded experiment loops;
+3. preserving one shared evidence and decision record across both.
+
+Reporting is generated from that record. It is not a separate research engine.
+
 ## Not yet
 
 - a fully autonomous scientist;
@@ -36,6 +46,8 @@ A researcher says: **“That is the research step I should take next, and I trus
 - a dashboard containing many unverified ideas;
 - an expensive system that launches work without researcher judgment;
 - a system that makes scientific claims without researcher review.
+- a grant-writing, journal-submission, social-network, or publication platform;
+- autonomous laboratory robotics or safety-critical physical execution.
 
 ## Scope
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Focused the product on literature-review and experiment automation.
+- Added a shared research-memory contract connecting both loops.
+- Added an approved-experiment execution prompt.
+- Added literature-review guidance, an agent prompt, and reusable review
+  templates.
+
 ## 0.1.0 — 2026-08-07
 
 - Released a Markdown-only research collaboration contract.
