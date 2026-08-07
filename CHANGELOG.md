@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.1 — 2026-08-07
 
 - Removed development-only strategy, dogfood, and release-process documents
   from the public product tree.
