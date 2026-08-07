@@ -31,11 +31,29 @@ Both loops update the same project files. This layer records:
 
 This memory is the control layer. It is not a third automation product.
 
+## Full Auto paper mode
+
+When requested, the agent may carry one project from question selection through
+literature review, experiments or proof work, preserved findings, and a
+finished paper. Full Auto uses the same evidence and state records; it is not a
+shortcut around them.
+
+## Current research modes
+
+Version 0.2 develops specialized tools for:
+
+- AI and machine learning;
+- mathematics;
+- biology.
+
+The shared loop may still record other research, but Open Discovery should not
+claim field-specific support until a corresponding mode guide exists.
+
 ## Not now
 
-Version 0.1 does not focus on paper or grant writing, journal submission,
-researcher social networks, dashboards, autonomous publication, laboratory
-robotics, or general-purpose project management.
+Version 0.2 does not focus on grant writing, journal submission, researcher
+social networks, dashboards, autonomous publication, laboratory robotics, or
+general-purpose project management.
 
-Short reports may be generated from preserved evidence, but reporting must not
-replace source review or experiment validation.
+Reports and papers may be generated from preserved evidence, but writing must
+not replace source review or experiment validation.

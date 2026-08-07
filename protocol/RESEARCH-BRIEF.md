@@ -29,7 +29,7 @@ What kind of evidence or argument would count as progress in this field? Include
 
 ## Constraints
 
-What must not change? What cost, safety, policy, privacy, or scientific limits apply?
+What must not change? What cost, policy, privacy, or scientific limits apply?
 
 ## Researcher judgment
 

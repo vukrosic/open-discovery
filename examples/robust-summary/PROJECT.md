@@ -45,8 +45,8 @@ stable central value or is pulled toward a faulty reading.
 - Compute and device: arithmetic that can be checked by hand.
 - Time: one bounded comparison per iteration.
 - Cost: zero.
-- Safety and ethics: no people, animals, or real-world intervention.
-- Privacy and legal: no personal or restricted data.
+- Research constraints: constructed teaching data only.
+- Data constraints: no personal or restricted data.
 - Access and external contact: none.
 - Actions that are forbidden: replacing cases after seeing the result or
   presenting constructed values as real observations.

@@ -16,8 +16,7 @@ Project folder:
 Review folder:
 [ABSOLUTE PATH TO PROJECT/reviews/REV-###]
 
-Read the harness AGENTS.md, docs/SUPPORTED-RESEARCH.md,
-docs/EVIDENCE-STANDARD.md, docs/STATE-MODEL.md, and
+Read the harness AGENTS.md, docs/EVIDENCE-STANDARD.md, docs/STATE-MODEL.md, and
 docs/LITERATURE-REVIEW-LOOP.md. Then read the complete project record and every
 file already in the review folder.
 
@@ -28,7 +27,7 @@ Before searching:
 2. Complete REVIEW-SPEC.md with the exact question, decision, review type,
    scope, inclusion and exclusion rules, source access, evidence standard,
    synthesis method, limits, and stopping rule.
-3. Verify that the review is supported and inside the recorded authority.
+3. Verify that the review is inside the recorded authority.
 4. Stop for human input if any choice could materially change which evidence
    is included or what conclusion would follow.
 

@@ -1,4 +1,13 @@
-# Project
+# Project: [Project name]
+
+## Project origin
+
+- Origin: New research / existing project
+- Existing folder or repository URL: None
+- Relationship: Open Discovery record only / may also edit existing project
+- Relevant files, branches, datasets, or entry points:
+- Integration notes:
+- Location last verified:
 
 ## Research question
 
@@ -24,6 +33,8 @@ What decision, belief, design, or action changes if we learn the answer?
 
 ## Research context
 
+- Primary research mode: AI and machine learning / Mathematics / Biology
+- Secondary research mode, if any:
 - Discipline or community:
 - Object, population, system, text, archive, phenomenon, or body of work:
 - Available sources, materials, data, tools, or access:
@@ -33,8 +44,8 @@ What decision, belief, design, or action changes if we learn the answer?
 - Compute and device:
 - Time:
 - Cost:
-- Safety and ethics:
-- Privacy and legal:
+- Research constraints:
+- Data constraints:
 - Access and external contact:
 - Actions that are forbidden:
 

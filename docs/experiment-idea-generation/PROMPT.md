@@ -26,8 +26,8 @@ Your task
 - Target the largest unresolved uncertainty or measured bottleneck supported by
   completed evidence.
 - Do not make the idea conditional on the unknown result of an unrun experiment.
-- Respect all project constraints, including compute, device, cost, safety,
-  data, contact, ethics, privacy, and scope boundaries.
+- Respect all project constraints, including compute, device, cost, data,
+  contact, ethics, privacy, and scope boundaries.
 - Do not repeat an idea already completed, rejected, parked, or made obsolete.
 - Do not propose a broad sweep when one decisive comparison would answer the
   question.

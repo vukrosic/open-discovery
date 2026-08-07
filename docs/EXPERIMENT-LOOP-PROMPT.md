@@ -13,15 +13,14 @@ Open Discovery harness:
 Project folder:
 [ABSOLUTE PATH TO PROJECT]
 
-Read the harness AGENTS.md, docs/SUPPORTED-RESEARCH.md,
-docs/EVIDENCE-STANDARD.md, docs/STATE-MODEL.md, and
+Read the harness AGENTS.md, docs/EVIDENCE-STANDARD.md, docs/STATE-MODEL.md, and
 docs/AUTONOMOUS-LOOP.md. Then read the complete project record and all evidence
 for any active work.
 
 Before changing state, verify:
 1. Exactly one idea is explicitly Approved in IDEAS.md.
 2. No conflicting experiment or review is Running.
-3. The work is supported, safe, and inside PROJECT.md authority and limits.
+3. The work is inside PROJECT.md authority and limits.
 4. The inputs, baseline, success gate, rejection gate, evidence requirements,
    costs, and stopping rule can be frozen before execution.
 
@@ -33,13 +32,13 @@ If all checks pass:
    templates/experiment/.
 2. Complete PROTOCOL.md before execution. Copy every applicable constraint and
    authority boundary into it.
-3. If completing the protocol introduces a method, cost, risk, download,
+3. If completing the protocol introduces a method, cost, download,
    external action, or decision not covered by the recorded approval, stop for
    human review. Do not check an approval box that is not true.
 4. Mark the idea and project Running only when execution actually starts.
 5. Run the smallest decisive test. Preserve raw inputs, outputs, logs,
    versions, environment details, deviations, failures, and costs.
-6. Stop at the first frozen rejection or safety gate. Do not weaken a gate
+6. Stop at the first frozen rejection gate. Do not weaken a gate
    after seeing the result.
 7. Complete RESULT.md with the narrowest accurate verdict.
 8. Update IDEAS.md, PROGRESS.md, FINDINGS.md, and WORK-LOG.md before any new
@@ -60,6 +59,6 @@ When finished, report:
 - the exact next human decision.
 ```
 
-Approval of an idea does not erase protocol, safety, cost, or external-action
+Approval of an idea does not erase protocol, cost, or external-action
 boundaries. If the method cannot be frozen inside the existing approval, the
 correct output is a reviewable protocol and a stop—not an unapproved run.

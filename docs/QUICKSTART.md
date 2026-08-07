@@ -1,32 +1,49 @@
 # Quick start
 
-This walkthrough creates one Open Discovery project using only Markdown.
+This walkthrough creates one local Open Discovery project through an AI chat.
 
 For an AI-assisted start, copy the prompt in
 [`KICKOFF-PROMPT.md`](KICKOFF-PROMPT.md). For a completed reference, inspect
 the [`robust-summary example`](../examples/robust-summary/README.md).
 
-## 0. Check whether the work is supported
+## 1. Start through the agent
 
-Read [`SUPPORTED-RESEARCH.md`](SUPPORTED-RESEARCH.md). If the project requires
-additional controls, identify the real institutional system and qualified human
-review before continuing. If the work is unsupported or eligibility is unknown,
-stop at planning.
+Open the cloned Open Discovery repository with Codex, Claude, or another
+file-capable agent and state a question, topic, field, or Full Auto request. The
+agent creates a unique `projects/<project-slug>/` folder and copies every file
+from `templates/project/` into it.
 
-## 1. Create a separate project folder
+The repository root is never a research project. Do not place `PROJECT.md`,
+project evidence, or conclusions at the root or in `docs/`. New parallel
+requests must use different project folders. The `projects/` directory is
+ignored by Git, so local research is not included in releases.
 
-Copy every file from `templates/project/` into a new folder outside this public
-harness repository, or into a private project repository.
+### Add an existing project
 
-Do not place project-specific evidence or conclusions in `docs/` here.
+You can also give the agent the path or repository URL of work that already
+exists, including a sibling folder or a project elsewhere on the computer. The
+agent creates a lightweight Open Discovery record under `projects/`, writes the
+original location and useful navigation notes into `PROJECT.md`, initializes
+the remaining project ledgers, and leaves the original project in place. A
+single pointer file is not enough because the project must remain resumable.
+
+The record does not grant permission to modify the original project. The agent
+first inspects it read-only and edits it only when the researcher explicitly
+authorizes that work. If an Open Discovery record already points to the same
+location, the agent should resume it instead of creating a duplicate.
+
+Copy-paste example:
+
+`Add my existing project to Open Discovery: [folder path or repository URL].`
 
 ## 2. Define the project with the human
 
-Complete `PROJECT.md` first. Write:
+Inside the generated project folder, complete `PROJECT.md` first. Write:
 
 - one concrete research question;
 - why answering it changes a decision or belief;
 - direct evidence, assumptions, and unknowns;
+- whether this is new research or an existing project, including its location;
 - constraints and forbidden actions;
 - exactly what the AI may do without asking again.
 

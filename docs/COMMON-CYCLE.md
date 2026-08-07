@@ -38,6 +38,5 @@ replication, consent, sampling, interpretation, or acceptable uncertainty.
 Those standards belong in the project and must be reviewed by someone with the
 relevant expertise.
 
-Markdown is the common interface. It is not a substitute for domain judgment,
-ethics review, laboratory controls, participant protection, or specialized
-research infrastructure.
+Markdown is the common interface. It is not a substitute for domain judgment
+or specialized research infrastructure.
