@@ -1,30 +1,18 @@
 # Contributing
 
-Open Discovery is intentionally small and Markdown-only. Contributions should
-make the research record clearer, more reproducible, more useful across fields,
-or safer for human–AI collaboration.
+Open Discovery is still deciding its roadmap and validating the core system.
 
-## Before contributing
+## Request a change
 
-Read `README.md`, `AGENTS.md`, `docs/HUMAN-AI-COLLABORATION.md`, and
-`docs/EVIDENCE-STANDARD.md`.
+For feature requests, improvements, bugs, or new research-mode ideas, please
+[open a GitHub issue](https://github.com/vukrosic/open-discovery/issues).
+Explain the problem, who it affects, and what outcome you want. Examples are
+helpful.
 
-## Good contributions
+## Pull requests
 
-- clearer project and run templates;
-- examples that contain no private or project-specific research;
-- field-specific guidance that does not pretend to be universal;
-- corrections to state boundaries or evidence rules;
-- documentation of a real research loop and its limitations;
-- concise improvements to the idea-generation prompt.
+Please do not submit unsolicited pull requests yet. Discuss the request in an
+issue first and wait for maintainer approval before implementing it.
 
-## Pull request checklist
-
-1. Keep the repository Markdown-only unless the project scope is explicitly
-   changed.
-2. Do not add models, datasets, secrets, private prompts, or project results.
-3. Preserve the distinction between proposals, approvals, runs, results, and
-   publication.
-4. Check every internal link and template path.
-5. Explain any change to human authority, autonomous work, or stopping rules.
-6. Include a small example or rationale when changing a template.
+This keeps development focused while we decide the roadmap, choose features,
+and make the existing research workflow work reliably.
