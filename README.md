@@ -9,6 +9,8 @@ project into a durable research loop.
 Open this repository with Codex, Claude, or another file-capable agent and
 paste one of these:
 
+`Use $literature-review to review [your topic] and deliver a PDF report.`
+
 `Do research and write a paper fully autonomously on [your topic].`
 
 `Do research and write a paper fully autonomously; choose the field and topic for me.`
@@ -20,6 +22,8 @@ paste one of these:
 ## What it does
 
 - reviews literature and preserves exact searches and sources;
+- runs the Literature Review skill autonomously with one research worker and
+  delivers a source-tracked PDF report;
 - proposes, freezes, and runs experiments or proof investigations;
 - records evidence, failures, negative results, and decisions;
 - keeps work resumable from files instead of chat history;
@@ -55,6 +59,8 @@ you request it.
 ## What is included
 
 - [`AGENTS.md`](AGENTS.md) — Starberry’s operating instructions
+- [`.agents/skills/literature-review/`](.agents/skills/literature-review/) —
+  autonomous one-worker literature review and PDF-report workflow
 - [`templates/`](templates/) — project, literature-review, and experiment records
 - [`docs/QUICKSTART.md`](docs/QUICKSTART.md) — complete workflow
 - [`docs/EVIDENCE-STANDARD.md`](docs/EVIDENCE-STANDARD.md) — evidence rules
@@ -63,7 +69,7 @@ you request it.
 
 ## Limits
 
-Version 0.2.1 is a Markdown harness, not a server or agent framework. The agent
+Version 0.3.0 is a Markdown harness, not a server or agent framework. The agent
 must have file access and the tools required by the research. A completed paper
 is not automatically correct, peer reviewed, or published; its claims remain
 limited by the preserved evidence.

@@ -51,7 +51,9 @@ What decision, belief, design, or action changes if we learn the answer?
 
 ## Human–AI authority
 
-- Collaboration mode: approval per experiment / bounded autonomous session
+- Collaboration mode: approval per experiment / bounded autonomous session /
+  autonomous literature review
+- Why the AI may proceed: user decision / `$literature-review` invocation
 - The AI may do without asking:
 - The AI must ask before:
 - Session limit:

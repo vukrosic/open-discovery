@@ -38,6 +38,19 @@ They preserve:
 
 ## Collaboration modes
 
+### Autonomous literature review
+
+Invoking the Literature Review skill authorizes one complete local review. The
+AI chooses a defensible scope, records the review specification, searches and
+screens sources, extracts claim-level evidence, synthesizes the result, and
+delivers a verified PDF report without asking for routine approvals.
+
+The project files still record scope, evidence, and limits, but they are the
+AI's internal research record rather than forms the user must complete. One
+research worker is used by default. The review does not authorize experiments,
+spending, publication, external messages, account changes, or destructive work
+outside the project.
+
 ### Approval per experiment
 
 The AI recommends one idea. The human approves, rejects, or parks it. The AI

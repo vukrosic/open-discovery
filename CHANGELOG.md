@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0 — 2026-08-07
+
+- Added the repo-scoped `$literature-review` skill.
+- Adapted [Deli AutoResearch](https://victorchen96.github.io/auto_research/framework.html)'s
+  persistence and anti-stall principles to a narrower single-worker review
+  workflow without its agent-swarm machinery.
+- Made skill invocation authorize one uninterrupted local literature review
+  without per-step approval prompts or user-managed project forms.
+- Defaulted the workflow to one research worker, preferring Luna with maximum
+  reasoning when the host exposes that model choice.
+- Added reader-facing `REPORT.md` and verified `REPORT.pdf` as completion
+  artifacts for autonomous reviews.
+- Added bounded source batches and pre-download ledger checkpoints so evidence
+  cannot run far ahead of the durable search and screening record.
+- Required the final handoff to disclose any project-local dependency installed
+  during the review, including its version, location, and purpose.
+
 ## 0.2.1 — 2026-08-07
 
 - Removed development-only strategy, dogfood, and release-process documents

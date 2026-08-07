@@ -7,6 +7,8 @@
 - Status: Proposed / Approved / Running
 - Date frozen:
 - Researcher or owner:
+- Execution mode: manual / autonomous literature review
+- Why the AI may proceed: human approval / `$literature-review` invocation
 
 ## Review question
 
@@ -65,9 +67,10 @@ strength?
 Copy every relevant access, licensing, privacy, copyright, cost, external-action,
 and publication boundary from `PROJECT.md`.
 
-## Approval
+## Freeze check
 
 - [ ] The question and decision are correct.
 - [ ] Inclusion and exclusion rules are frozen.
 - [ ] Search access and evidence standards are adequate.
 - [ ] Limits, risks, and authority boundaries are acceptable.
+- [ ] The review is authorized by a human decision or skill invocation.
