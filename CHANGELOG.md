@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Removed development-only strategy, dogfood, and release-process documents
+  from the public product tree.
+- Archived the superseded general protocol outside the public repository so
+  users see one canonical project, review, and experiment workflow.
+- Expanded ignore rules for local environments, logs, model files, and array
+  artifacts.
+
 ## 0.2.0 — 2026-08-07
 
 - Focused the product on literature-review and experiment automation.

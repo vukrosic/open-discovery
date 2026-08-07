@@ -146,13 +146,10 @@ than the evidence.
 
 ## Repository map
 
-- [`GOAL.md`](GOAL.md) — product promise and scope.
 - [`AGENTS.md`](AGENTS.md) — operating contract for AI agents.
 - [`docs/QUICKSTART.md`](docs/QUICKSTART.md) — first project walkthrough.
 - [`docs/KICKOFF-PROMPT.md`](docs/KICKOFF-PROMPT.md) — copy-paste prompt for
   initializing a project with an AI agent.
-- [`docs/PRODUCT-FOCUS.md`](docs/PRODUCT-FOCUS.md) — the two automation loops,
-  shared research memory, and near-term exclusions.
 - [`docs/LITERATURE-REVIEW-LOOP.md`](docs/LITERATURE-REVIEW-LOOP.md) — durable
   source-search and synthesis workflow.
 - [`docs/LITERATURE-REVIEW-PROMPT.md`](docs/LITERATURE-REVIEW-PROMPT.md) —
@@ -170,7 +167,6 @@ than the evidence.
   for AI/ML, mathematics, and biology.
 - [`docs/experiment-idea-generation/PROMPT.md`](docs/experiment-idea-generation/PROMPT.md)
   — reusable prompt for recommending one next experiment.
-- [`protocol/`](protocol/) — general research intake and result protocol.
 - [`templates/`](templates/) — files to copy into each real project and run.
 - [`templates/literature-review/`](templates/literature-review/) — files for a
   reproducible search, evidence table, and synthesis.
@@ -178,6 +174,9 @@ than the evidence.
 - [`examples/robust-summary/`](examples/robust-summary/) — completed teaching
   project with a frozen protocol, transparent calculations, a negative result,
   and a next decision.
+- [`CHANGELOG.md`](CHANGELOG.md) — released changes by version.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution rules.
+- [`SECURITY.md`](SECURITY.md) — security and private-data guidance.
 
 ## What is intentionally absent
 
