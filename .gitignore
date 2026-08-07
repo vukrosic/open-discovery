@@ -1,2 +1,22 @@
 # Local research projects created through Open Discovery
 /projects/
+
+# Local machine and environment state
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+
+# Model and array artifacts do not belong in the released harness
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
