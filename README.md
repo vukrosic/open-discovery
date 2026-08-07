@@ -1,75 +1,117 @@
 # Open Discovery
 
-Open Discovery is an open project for helping researchers in every field move from an important question to trustworthy knowledge faster.
+Open Discovery is a Markdown-first harness for human–AI research.
 
-> “Our strategy is not to decide which scientific problems deserve attention or try to solve them all ourselves. It is to put capable tools in the hands of the research community and let researchers pursue the questions they know best.”
->
-> — [OpenAI](https://openai.com/index/chatgpt-for-academic-researchers/)
+It helps a researcher turn one uncertain question into a sequence of small,
+reviewable investigations. The AI can recommend and run work inside the scope
+the human grants, but the question, evidence standard, constraints, and
+consequential decisions remain explicit.
 
-This is our main strategy too.
+The core loop is:
 
-The long-term idea is similar to Discovery Loop, expanded across all research: automate the repetitive loop between a question, an appropriate method, evidence, interpretation, and the next question. Discovery Loop argues that this approach can help with important subproblems across nearly all fourteen U.S. National Academy of Engineering Grand Challenges; Open Discovery extends the ambition beyond ML and experimental research to every legitimate research discipline and method.
+> question → evidence → one next idea → approval → protocol → run → result → next question
 
-> ask → understand what is known → choose a method → gather or derive evidence → evaluate → learn → ask again
+## What this release contains
 
-## Goal
+Version 0.1 is deliberately only Markdown files. There is no package, server,
+database, agent framework, or hidden automation.
 
-Help any researcher turn one uncertain question into the next trustworthy research step, then preserve what was learned.
+The repository provides:
 
-Open Discovery is not trying to replace scholarly or scientific judgment. It should support the work around turning a question into an appropriate, rigorous, and reviewable investigation.
+- a project brief that defines the question and authority boundaries;
+- a task specification with success criteria and stopping rules;
+- an idea ledger that separates proposed, approved, rejected, and parked work;
+- a progress record that makes the current state resumable;
+- experiment protocol and result templates;
+- append-only-style findings and work logs;
+- operating instructions for AI agents;
+- rules for evidence, negative results, pivots, and bounded autonomy.
 
-## First feature: Research Problem Intake
+The files are the system. They can be read, reviewed, diffed, copied into any
+project, and versioned with Git.
 
-A researcher from any field submits the question they know best, in their own words. Open Discovery turns it into a precise, reviewable problem brief: the uncertainty, why it matters, context, current evidence, constraints, appropriate standards of evidence, and what a useful answer would change. The researcher approves that brief before any literature work, proof attempt, experiment, observation, interview, analysis, design, or fieldwork begins.
+## Why Markdown first
 
-## First goal
+The first problem is not orchestration software. It is making the research
+state legible enough that a human and an AI can work together without losing:
 
-Use the smallest version ourselves while talking to researchers across disciplines. The first version captures a question, identifies the kind of inquiry it requires, records the evidence and uncertainty, and recommends one justified next research step.
+- what was actually approved;
+- what was actually run;
+- which evidence supports a claim;
+- which directions already failed;
+- what the current strongest result is;
+- what the AI may do next without asking again.
 
-We want to learn:
+Software should automate this only after the document contract survives real
+research loops.
 
-- which parts of research are slow, repetitive, or difficult to scale;
-- how researchers currently choose ideas and experiments;
-- where AI assistance is genuinely useful;
-- what evidence, controls, and review are required before trusting a result;
-- which small workflow would be worth building first.
+## Quick start
 
-## Product direction
+1. Copy [`templates/project/`](templates/project/) into a new project folder.
+2. Fill in `PROJECT.md` and `TASK-SPEC.md` with the researcher.
+3. Record ideas in `IDEAS.md`; do not treat a proposal as approval.
+4. When an idea is approved, copy [`templates/experiment/`](templates/experiment/)
+   into a new numbered run folder.
+5. Complete `PROTOCOL.md` before doing the work.
+6. Preserve the raw evidence and write `RESULT.md`, including negative or
+   inconclusive outcomes.
+7. Update `PROGRESS.md`, `FINDINGS.md`, and `WORK-LOG.md` before choosing the
+   next direction.
 
-Open Discovery may eventually help researchers:
+Read [`docs/QUICKSTART.md`](docs/QUICKSTART.md) for a complete walkthrough.
 
-1. define a research question;
-2. find and organize relevant literature, sources, and evidence;
-3. clarify hypotheses, interpretations, conjectures, or competing explanations;
-4. choose methods appropriate to the field and question;
-5. support proofs, experiments, observations, interviews, archival work, analysis, design, simulation, or fieldwork;
-6. evaluate results against the field's appropriate standards of evidence;
-7. record wins, losses, confounds, and inconclusive results;
-8. decide what to investigate next;
-9. produce a clear, reviewable research report.
+If you are working with an AI agent, start with the copy-paste
+[`KICKOFF-PROMPT.md`](docs/KICKOFF-PROMPT.md). To see what a completed loop
+looks like, read the fully worked
+[`robust-summary example`](examples/robust-summary/README.md).
 
-The long-term product is intentionally undecided. We will earn it by completing real loops and talking to researchers.
+Before starting real work, check
+[`SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md). It states which research
+workflows version 0.1 supports, which require additional institutional controls,
+and which must not be executed through this harness.
 
-## Principles
+## The important state boundaries
 
-- Researchers remain responsible for the question, judgment, and scientific validity.
-- Every claim should have evidence, a measurable acceptance target, or an explicit uncertainty.
-- Methods, sources, assumptions, provenance, limitations, and relevant controls should be recorded.
-- Negative and inconclusive results are useful outputs.
-- Open protocols and reproducible artifacts matter more than impressive demos.
-- Start with the smallest useful research step and earn the right to automate more.
+- **Proposed** is not approved.
+- **Approved** is not running.
+- **Running** is not completed.
+- **Completed** is not successful.
+- **Measured locally** is not reproduced elsewhere.
+- **Written** is not published.
+- **A profile estimate** is not an end-to-end improvement.
 
-## Start here
+These distinctions prevent the research record from becoming more confident
+than the evidence.
 
-- [`GOAL.md`](GOAL.md) — the product contract
-- [`FIRST-CUSTOMER.md`](FIRST-CUSTOMER.md) — how we dogfood it
-- [`docs/COMMON-CYCLE.md`](docs/COMMON-CYCLE.md) — the recurring propose, run, and evaluate loop
-- [`protocol/`](protocol/) — the version-zero research loop
+## Repository map
+
+- [`GOAL.md`](GOAL.md) — product promise and scope.
+- [`AGENTS.md`](AGENTS.md) — operating contract for AI agents.
+- [`docs/QUICKSTART.md`](docs/QUICKSTART.md) — first project walkthrough.
+- [`docs/KICKOFF-PROMPT.md`](docs/KICKOFF-PROMPT.md) — copy-paste prompt for
+  initializing a project with an AI agent.
+- [`docs/HUMAN-AI-COLLABORATION.md`](docs/HUMAN-AI-COLLABORATION.md) — authority
+  and responsibility model.
+- [`docs/AUTONOMOUS-LOOP.md`](docs/AUTONOMOUS-LOOP.md) — bounded repeated work.
+- [`docs/EVIDENCE-STANDARD.md`](docs/EVIDENCE-STANDARD.md) — claim and evidence rules.
+- [`docs/STATE-MODEL.md`](docs/STATE-MODEL.md) — canonical document states.
+- [`docs/SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md) — current scientist,
+  discipline, safety, and execution boundaries.
+- [`docs/experiment-idea-generation/PROMPT.md`](docs/experiment-idea-generation/PROMPT.md)
+  — reusable prompt for recommending one next experiment.
+- [`protocol/`](protocol/) — general research intake and result protocol.
+- [`templates/`](templates/) — files to copy into each real project and run.
+- [`examples/robust-summary/`](examples/robust-summary/) — completed teaching
+  project with a frozen protocol, transparent calculations, a negative result,
+  and a next decision.
+
+## What is intentionally absent
+
+This public repository contains no project-specific experiments, model files,
+datasets, benchmark outputs, private prompts, or conclusions from the research
+used to develop the method.
 
 ## Status
 
-Version zero: a testable research protocol, ready for its first real loop.
-
-## Background
-
-Discovery Loop describes its mission as automating experimental loops to accelerate science and engineering. Open Discovery explores a broader, open direction for researchers in every discipline and treats the researcher—not a company or model—as the source of which questions matter.
+Version 0.1: a release-ready Markdown contract for testing human–AI research
+collaboration on real projects.

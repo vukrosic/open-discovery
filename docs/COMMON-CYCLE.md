@@ -1,44 +1,43 @@
-# Common Cycle in Many Disciplines
+# Common research cycle
 
-## The universal loop of science and engineering
+Many research disciplines have a repeating pattern:
 
-```mermaid
-flowchart LR
-    A["Propose Experiment"] --> B["Implement and Run"]
-    B --> C["Evaluate"]
-    C --> A
+```text
+question → current evidence → method → observation or argument → evaluation → next question
 ```
 
-## Our approach: automate the loop
+The method changes by field. The record does not need to.
 
-- Drive down iteration time.
-- Propose and automatically run many experiments.
-- Learn from each evaluation to produce better experiments.
-- Scale the quality and volume of experiments toward breakthrough results.
+## A shared document cycle
 
-This cycle is one important research pattern. Open Discovery should support it wherever it fits while allowing researchers in other disciplines to define the methods and standards appropriate to their own questions.
+1. State the uncertainty in `PROJECT.md`.
+2. Describe the baseline, standards, and limits in `TASK-SPEC.md`.
+3. Put possible directions in `IDEAS.md`.
+4. Approve one direction when approval is required.
+5. Freeze its method and decision rule in `runs/<id>/PROTOCOL.md`.
+6. Perform the appropriate research step: computation, proof, experiment,
+   observation, interview, survey, archival inquiry, fieldwork, analysis, or
+   design study.
+7. Record direct evidence and limitations in `runs/<id>/RESULT.md`.
+8. Update the shared progress and findings before selecting what comes next.
 
-## Broad applicability
+## What can be shared across disciplines
 
-Discovery Loop describes the strategy this way:
+- a precise question;
+- a reason the answer matters;
+- a baseline or current point of comparison;
+- a predeclared method and decision rule;
+- provenance and evidence;
+- explicit uncertainty and limitations;
+- a durable next-step decision.
 
-> Our general approach is to automate the experimental loop. We think this approach is broadly applicable across many different fields of science and engineering. We’ll initially focus on ML research and engineering, but believe the approach can help with important subproblems in nearly every one of the fourteen NAE Grand Challenge problems. We think doing this well requires strong expertise in machine learning as well as large-scale systems.
+## What must remain field-specific
 
-The fourteen U.S. National Academy of Engineering Grand Challenges are:
+Open Discovery does not prescribe one meaning of proof, validity, significance,
+replication, consent, sampling, interpretation, or acceptable uncertainty.
+Those standards belong in the project and must be reviewed by someone with the
+relevant expertise.
 
-- Make solar energy economical.
-- Provide energy from fusion.
-- Develop carbon sequestration methods.
-- Manage the nitrogen cycle.
-- Provide access to clean water.
-- Restore and improve urban infrastructure.
-- Advance health informatics.
-- Engineer better medicines.
-- Reverse-engineer the brain.
-- Prevent nuclear terror.
-- Secure cyberspace.
-- Enhance virtual reality.
-- Advance personalized learning.
-- Engineer the tools of scientific discovery.
-
-Open Discovery adopts the broad ambition, but not the initial limitation to ML. Our system should support researchers across science, engineering, mathematics, medicine, the social sciences, the humanities, and other scholarly fields. Automation must adapt to the method: an experiment may be replaced by a proof, observation, interview, archival inquiry, field study, design, simulation, or another discipline-appropriate research step.
+Markdown is the common interface. It is not a substitute for domain judgment,
+ethics review, laboratory controls, participant protection, or specialized
+research infrastructure.

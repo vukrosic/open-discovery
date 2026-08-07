@@ -39,4 +39,13 @@ A researcher says: **“That is the research step I should take next, and I trus
 
 ## Scope
 
-Open Discovery is for all legitimate research disciplines and methods. It must not assume that a valid question has code, a numerical metric, a controlled experiment, or a laboratory. Rigor is defined with the researcher and the standards of the relevant field.
+Open Discovery is designed to represent legitimate research questions across
+disciplines and methods. It must not assume that a valid question has code, a
+numerical metric, a controlled experiment, or a laboratory. Rigor is defined
+with the researcher and the standards of the relevant field.
+
+Representation is not authorization or operational support. Version 0.1 is
+immediately usable only for the low-risk workflows listed in
+[`docs/SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md). Regulated,
+safety-critical, human-subjects, animal, hazardous, or sensitive-data research
+requires safeguards that this Markdown harness does not provide.
