@@ -2,6 +2,8 @@
 
 ## Current state
 
+- Project folder:
+- Active task or operator: None
 - Project status: Ready
 - Current iteration: 0
 - Active run: None

@@ -2,6 +2,8 @@
 
 Open Discovery is a Markdown-first harness for human–AI research.
 
+Its user-facing AI research partner is **Starberry**.
+
 It helps a researcher turn one uncertain question into a sequence of small,
 reviewable investigations. The AI can recommend and run work inside the scope
 the human grants, but the question, evidence standard, constraints, and
@@ -10,6 +12,11 @@ consequential decisions remain explicit.
 The core loop is:
 
 > question → evidence → one next idea → approval → protocol → run → result → next question
+
+> “We believe the biggest positive impacts of AI will be in biology and
+> medicine.”
+>
+> — Anthropic, [AI for Science Program](https://www.anthropic.com/news/ai-for-science-program)
 
 ## Current product focus
 
@@ -26,10 +33,28 @@ The literature loop summarizes existing evidence. The experiment loop creates
 new evidence. The shared record prevents both loops from repeating work or
 quietly changing the question.
 
+The current field focus is **AI and machine learning, mathematics, and
+biology**. Each field has a practical mode guide with its own evidence checks
+and research tools, while all three use the same durable research loop.
+Users may work step by step or request Full Auto mode through a finished paper.
+
+## Coding-agent compatibility
+
+Open Discovery is designed to be used with file-capable coding agents such as
+**OpenAI Codex**, **Claude Code**, and open-source coding harnesses. It is not
+tied to one model provider, agent runtime, or proprietary integration.
+
+The Markdown files are the interface. A compatible agent must be able to read
+the project record, edit Markdown, preserve evidence, run only authorized work,
+and stop at the written approval boundaries. Point the agent to `AGENTS.md` and
+the active project's files before beginning a research loop.
+
 ## What this release contains
 
-Version 0.1 is deliberately only Markdown files. There is no package, server,
-database, agent framework, or hidden automation.
+Version 0.2 deliberately keeps the operating system in Markdown. There is no
+package, server, database, agent framework, or hidden automation. The only
+supporting repository file is `.gitignore`, which keeps locally generated
+research projects out of the public Git history.
 
 The repository provides:
 
@@ -63,8 +88,11 @@ research loops.
 
 ## Quick start
 
-1. Copy [`templates/project/`](templates/project/) into a new project folder.
-2. Fill in `PROJECT.md` and `TASK-SPEC.md` with the researcher.
+1. Open the cloned repository with Codex, Claude, or another file-capable agent
+   and give it a question, topic, field, or Full Auto command.
+2. The agent creates a unique local `projects/<project-slug>/` folder, copies
+   [`templates/project/`](templates/project/), and fills in `PROJECT.md` and
+   `TASK-SPEC.md` with the researcher.
 3. Record ideas in `IDEAS.md`; do not treat a proposal as approval.
 4. When an idea is approved, copy [`templates/experiment/`](templates/experiment/)
    into a new numbered run folder.
@@ -87,10 +115,21 @@ evidence or the
 [`EXPERIMENT-LOOP-PROMPT.md`](docs/EXPERIMENT-LOOP-PROMPT.md) after an
 experiment has been explicitly approved.
 
-Before starting real work, check
-[`SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md). It states which research
-workflows version 0.1 supports, which require additional institutional controls,
-and which must not be executed through this harness.
+## Local research projects
+
+Real research lives under `projects/<project-slug>/` inside the clone. That
+directory is ignored by Git: the released harness stays clean while project
+questions, evidence, experiments, and papers remain local. Each new or parallel
+request gets its own folder, and an existing project is resumed only when the
+researcher asks for it.
+
+Existing work may remain in a sibling folder, elsewhere on the computer, or in
+a remote repository. Open Discovery creates a local record under `projects/`
+that stores the original path or URL and navigation notes; it does not move or
+edit the original project automatically.
+
+Because these projects live inside the local clone, deleting the clone also
+deletes them. Back up or export important projects before removing the folder.
 
 ## The important state boundaries
 
@@ -125,25 +164,30 @@ than the evidence.
 - [`docs/AUTONOMOUS-LOOP.md`](docs/AUTONOMOUS-LOOP.md) — bounded repeated work.
 - [`docs/EVIDENCE-STANDARD.md`](docs/EVIDENCE-STANDARD.md) — claim and evidence rules.
 - [`docs/STATE-MODEL.md`](docs/STATE-MODEL.md) — canonical document states.
-- [`docs/SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md) — current scientist,
-  discipline, safety, and execution boundaries.
+- [`docs/EXAMPLE-RESEARCH-IDEAS.md`](docs/EXAMPLE-RESEARCH-IDEAS.md) — sample
+  directions a researcher can bring to Open Discovery.
+- [`research-modes/`](research-modes/) — shared tools and field-specific guides
+  for AI/ML, mathematics, and biology.
 - [`docs/experiment-idea-generation/PROMPT.md`](docs/experiment-idea-generation/PROMPT.md)
   — reusable prompt for recommending one next experiment.
 - [`protocol/`](protocol/) — general research intake and result protocol.
 - [`templates/`](templates/) — files to copy into each real project and run.
 - [`templates/literature-review/`](templates/literature-review/) — files for a
   reproducible search, evidence table, and synthesis.
+- `projects/` — locally generated, Git-ignored research workspaces.
 - [`examples/robust-summary/`](examples/robust-summary/) — completed teaching
   project with a frozen protocol, transparent calculations, a negative result,
   and a next decision.
 
 ## What is intentionally absent
 
-This public repository contains no project-specific experiments, model files,
-datasets, benchmark outputs, private prompts, or conclusions from the research
-used to develop the method.
+The public Git history contains no project-specific experiments, model files,
+datasets, benchmark outputs, private prompts, or conclusions. A user's local,
+ignored `projects/` directory may contain all of these as their research
+requires.
 
 ## Status
 
-Version 0.1: operational Markdown contracts for AI-assisted literature review,
-approved experiment execution, and durable research memory.
+Version 0.2: Starberry-powered project initialization, AI/ML, mathematics, and
+biology research modes, existing-project attachment, literature review,
+approved experiment execution, Full Auto routing, and durable research memory.

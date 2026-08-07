@@ -1,7 +1,7 @@
 # Bounded autonomous research loop
 
-This loop is for projects where the human has explicitly authorized repeated
-safe, local, reversible work.
+This loop is for projects where the human has explicitly authorized repeated,
+bounded work.
 
 ## Inputs to every iteration
 
@@ -71,7 +71,7 @@ research objective is complete.
 
 - the human asks to stop;
 - the next action exceeds written authority;
-- a safety, ethics, privacy, legal, access, or cost boundary is unclear;
+- an access or cost boundary is unclear;
 - the required evidence cannot be preserved;
 - further work would only repeat a closed mechanism;
 - the objective has genuinely been achieved.

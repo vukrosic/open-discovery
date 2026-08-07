@@ -24,7 +24,8 @@ Describe what the researcher would actually do, at the level appropriate for rev
 
 ## Constraints and responsibilities
 
-Record time, cost, access, ethics, safety, privacy, community, legal, cultural, and field-specific obligations.
+Record time, cost, access, ethics, privacy, community, legal, cultural, and
+field-specific obligations.
 
 ## Records to preserve
 

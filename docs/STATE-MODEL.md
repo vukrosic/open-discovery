@@ -1,36 +1,51 @@
 # Markdown state model
 
-Every project uses ordinary Markdown files.
+Open Discovery keeps the released harness and local research in one clone while
+separating them through the Git-ignored `projects/` directory.
 
 ```text
-project-name/
-├── PROJECT.md
-├── TASK-SPEC.md
-├── IDEAS.md
-├── PROGRESS.md
-├── FINDINGS.md
-├── WORK-LOG.md
-├── evidence/
-├── reviews/
-│   └── REV-001/
-│       ├── REVIEW-SPEC.md
-│       ├── SEARCH-LOG.md
-│       ├── EVIDENCE-TABLE.md
-│       └── SYNTHESIS.md
-└── runs/
-    └── EXP-001/
-        ├── PROTOCOL.md
-        └── RESULT.md
+open-discovery/
+├── AGENTS.md
+├── docs/
+├── templates/
+├── examples/
+└── projects/                         # generated locally; ignored by Git
+    └── project-name/
+        ├── PROJECT.md
+        ├── TASK-SPEC.md
+        ├── IDEAS.md
+        ├── PROGRESS.md
+        ├── FINDINGS.md
+        ├── WORK-LOG.md
+        ├── evidence/
+        ├── reviews/
+        │   └── REV-001/
+        │       ├── REVIEW-SPEC.md
+        │       ├── SEARCH-LOG.md
+        │       ├── EVIDENCE-TABLE.md
+        │       └── SYNTHESIS.md
+        └── runs/
+            └── EXP-001/
+                ├── PROTOCOL.md
+                └── RESULT.md
 ```
 
 The `evidence/` directory may contain whatever the real project needs. Those
-artifacts belong to the project, not to this public harness repository.
+artifacts belong to the local project and are not part of the released Git
+history. Each active agent uses a different project folder.
+
+For existing work, the Open Discovery folder is a research record, not a copy
+of the original project. `PROJECT.md` stores the original folder path or
+repository URL, relevant entry points, and whether later work may edit the
+original. The existing project can live in a sibling directory, elsewhere on
+the computer, or in a remote repository.
 
 ## Source of truth for each question
 
 | Question | Source of truth |
 | --- | --- |
 | What are we trying to learn? | `PROJECT.md` |
+| Where does existing project work live? | `PROJECT.md` |
 | What counts as success? | `TASK-SPEC.md` |
 | Which ideas exist and what is their state? | `IDEAS.md` |
 | What is happening now? | `PROGRESS.md` |
@@ -76,6 +91,10 @@ mean the literature is exhaustive.
 ## Required invariants
 
 - At most one run is active.
+- A Proposed idea has no run folder or protocol; those are created only after
+  approval.
+- `PROTOCOL.md` and `RESULT.md` live inside `runs/<id>/`, never at the project
+  root.
 - Every started run has a protocol and a result document.
 - Every started review has a frozen specification, search log, evidence table,
   and synthesis document.

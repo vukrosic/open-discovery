@@ -6,7 +6,7 @@ Open Discovery helps any researcher turn one uncertain question into the next tr
 
 ## First user
 
-A researcher in any discipline with:
+A researcher in AI and machine learning, mathematics, or biology with:
 
 - a concrete question;
 - knowledge of why that question matters;
@@ -31,33 +31,30 @@ A researcher says: **“That is the research step I should take next, and I trus
 
 ## Current build priority
 
-Version 0.1 focuses on:
+Version 0.2 focuses on:
 
 1. automating a reproducible literature-review loop;
 2. automating approved, bounded experiment loops;
-3. preserving one shared evidence and decision record across both.
+3. preserving one shared evidence and decision record across both;
+4. providing field-specific research tools for AI/ML, mathematics, and biology;
+5. supporting Full Auto projects that carry the same evidence record through
+   to a finished paper.
 
 Reporting is generated from that record. It is not a separate research engine.
 
 ## Not yet
 
-- a fully autonomous scientist;
-- a general paper-writing agent;
 - a dashboard containing many unverified ideas;
 - an expensive system that launches work without researcher judgment;
 - a system that makes scientific claims without researcher review.
 - a grant-writing, journal-submission, social-network, or publication platform;
-- autonomous laboratory robotics or safety-critical physical execution.
+- laboratory robotics or physical automation.
 
 ## Scope
 
-Open Discovery is designed to represent legitimate research questions across
-disciplines and methods. It must not assume that a valid question has code, a
-numerical metric, a controlled experiment, or a laboratory. Rigor is defined
-with the researcher and the standards of the relevant field.
+Open Discovery currently develops specialized support for AI and machine
+learning, mathematics, and biology. Its shared files can represent other
+disciplines, but those fields do not yet have dedicated mode guides.
 
-Representation is not authorization or operational support. Version 0.1 is
-immediately usable only for the low-risk workflows listed in
-[`docs/SUPPORTED-RESEARCH.md`](docs/SUPPORTED-RESEARCH.md). Regulated,
-safety-critical, human-subjects, animal, hazardous, or sensitive-data research
-requires safeguards that this Markdown harness does not provide.
+Each project defines its own method, constraints, and standards with the
+researcher and the relevant field.

@@ -52,7 +52,7 @@ The human explicitly grants a scope, resource limit, action boundary, and stop
 condition. The AI may propose and run multiple iterations inside that boundary,
 while recording every protocol and result.
 
-Use this mode only when failed runs are safe, cheap, and reversible. A bounded
+Use this mode only when failed runs are cheap and reversible. A bounded
 session does not authorize external publication, spending, destructive action,
 or scope expansion unless those actions are explicitly included.
 

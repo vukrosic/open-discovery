@@ -18,7 +18,7 @@ A protocol should define:
 - relevant controls or counterexamples;
 - success, rejection, and inconclusive conditions;
 - case-level requirements that an average must not hide;
-- resource, safety, and stopping limits.
+- resource and stopping limits.
 
 If a gate is discovered to be wrong, preserve the original outcome and record
 a correction. Do not retroactively describe the run as having passed.
