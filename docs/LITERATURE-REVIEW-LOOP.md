@@ -1,9 +1,9 @@
 # Literature review loop
 
-This loop maps existing evidence before deciding whether a new experiment is
-needed. It supports bounded scoping and evidence reviews. It does not claim to
-be a publication-grade systematic review unless the project supplies and meets
-the relevant field standard.
+This loop maps existing evidence and ends with a source-tracked PDF report. It
+supports bounded scoping and evidence reviews. It does not run experiments or
+claim to be a publication-grade systematic review unless the project supplies
+and meets the relevant field standard.
 
 ## 1. Freeze the review specification
 
@@ -55,13 +55,22 @@ Complete `SYNTHESIS.md`, then update `FINDINGS.md`, `PROGRESS.md`, `IDEAS.md`,
 and `WORK-LOG.md`. The next idea must follow from reviewed evidence, not from an
 unverified search snippet.
 
-## Stop conditions
+## 7. Deliver the report
 
-Stop and return to the human when:
+Complete `REPORT.md`, render `REPORT.pdf`, and verify the final PDF opens,
+contains the expected text and pages, and has no visibly clipped or broken
+content. The report must summarize the review question, method, coverage,
+findings, conflicts, gaps, limitations, and full references.
 
-- the scope or evidence standard is ambiguous;
-- required sources are inaccessible;
-- search access, licensing, privacy, or copyright boundaries are uncertain;
-- the source limit or time boundary is reached;
-- added sources stop changing the decision under the frozen stopping rule;
-- a consequential field judgment requires qualified human review.
+## Autonomous completion rule
+
+When invoked through the Literature Review skill, do not stop to ask the user
+to choose scope, databases, dates, source counts, or report structure. Choose
+conservative defaults and record them. Use exactly one research worker unless
+the user explicitly asks for multiple agents.
+
+Finish when the frozen stopping rule is met and the PDF and durable evidence
+record are complete. If sources are inaccessible, use accessible alternatives
+and record the limitation. If the scope is too broad, narrow it. If evidence is
+sparse, complete an honest negative or inconclusive report. Return Blocked only
+after safe alternatives are genuinely exhausted.

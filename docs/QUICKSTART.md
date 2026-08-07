@@ -8,6 +8,15 @@ the [`robust-summary example`](../examples/robust-summary/README.md).
 
 ## 1. Start through the agent
 
+For an autonomous literature review with a PDF deliverable, use:
+
+`Use $literature-review to review [your topic] and deliver a PDF report.`
+
+Starberry creates the project, uses one research worker by default, records the
+scope and search method internally, and returns when the verified report is
+complete. You do not need to approve individual search steps or fill out the
+project templates.
+
 Open the cloned Open Discovery repository with Codex, Claude, or another
 file-capable agent and state a question, topic, field, or Full Auto request. The
 agent creates a unique `projects/<project-slug>/` folder and copies every file
@@ -38,6 +47,9 @@ Copy-paste example:
 
 ## 2. Define the project with the human
 
+Skip this section when using `$literature-review`; the skill completes and
+freezes the project and review records autonomously.
+
 Inside the generated project folder, complete `PROJECT.md` first. Write:
 
 - one concrete research question;
@@ -63,7 +75,8 @@ rejected ideas; they prevent repetition.
 
 - To map existing evidence, copy `templates/literature-review/` into a numbered
   folder such as `reviews/REV-001/` and use
-  [`LITERATURE-REVIEW-PROMPT.md`](LITERATURE-REVIEW-PROMPT.md).
+  [`LITERATURE-REVIEW-PROMPT.md`](LITERATURE-REVIEW-PROMPT.md), or invoke
+  `$literature-review` for the autonomous one-worker workflow.
 - To execute an approved experiment, continue below or use
   [`EXPERIMENT-LOOP-PROMPT.md`](EXPERIMENT-LOOP-PROMPT.md).
 

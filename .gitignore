@@ -1,6 +1,11 @@
 # Local research projects created through Open Discovery
 /projects/
 
+# Internal development and evaluation records belong in the private sibling workspace
+/development/
+/evaluations/
+/test-runs/
+
 # Local machine and environment state
 .DS_Store
 .env

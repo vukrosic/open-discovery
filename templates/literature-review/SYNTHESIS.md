@@ -63,6 +63,8 @@ replicate, propose an experiment, change mechanism, or return to the human.
 - Idea states changed:
 - Proposed next idea:
 - Progress resume point:
+- Reader-facing report: `REPORT.md`
+- Verified PDF report: `REPORT.pdf`
 
 ## Review checklist
 
@@ -72,3 +74,4 @@ replicate, propose an experiment, change mechanism, or return to the human.
 - [ ] Missing access and negative search results are explicit.
 - [ ] The conclusion matches the frozen scope and stopping rule.
 - [ ] Project ledgers were updated before another loop began.
+- [ ] `REPORT.pdf` was rendered and checked for validity and visible defects.

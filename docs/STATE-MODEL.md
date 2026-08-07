@@ -23,7 +23,9 @@ open-discovery/
         │       ├── REVIEW-SPEC.md
         │       ├── SEARCH-LOG.md
         │       ├── EVIDENCE-TABLE.md
-        │       └── SYNTHESIS.md
+        │       ├── SYNTHESIS.md
+        │       ├── REPORT.md
+        │       └── REPORT.pdf
         └── runs/
             └── EXP-001/
                 ├── PROTOCOL.md
@@ -57,6 +59,7 @@ the computer, or in a remote repository.
 | What searches and screening decisions occurred? | `reviews/<id>/SEARCH-LOG.md` |
 | Which source supports each extracted claim? | `reviews/<id>/EVIDENCE-TABLE.md` |
 | What does the reviewed evidence establish? | `reviews/<id>/SYNTHESIS.md` |
+| What is the reader-facing literature report? | `reviews/<id>/REPORT.md` and `REPORT.pdf` |
 
 ## Idea states
 
@@ -80,6 +83,11 @@ Literature reviews use the same separation between **Proposed**, **Approved**,
 review was **Completed**, **Inconclusive**, or **Blocked**; completion does not
 mean the literature is exhaustive.
 
+When the Literature Review skill is invoked, the invocation is the approval
+record: the AI freezes the specification and may move directly to **Running**.
+This shortcut applies only to that local review and does not approve an
+experiment or any external action.
+
 ## Project states
 
 - **Ready:** no run is active and a next decision can be made.
@@ -97,7 +105,8 @@ mean the literature is exhaustive.
   root.
 - Every started run has a protocol and a result document.
 - Every started review has a frozen specification, search log, evidence table,
-  and synthesis document.
+  synthesis document, and reader-facing Markdown report. A completed review
+  also has a verified PDF report.
 - The progress document names the same active run as the idea ledger.
 - A finding links to evidence or states why no durable artifact exists.
 - The strongest result changes only after all written gates pass.
