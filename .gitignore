@@ -1,6 +1,9 @@
 # Local research projects created through Open Discovery
 /projects/
 
+# Local running instances of the Hierarchy of Agents Research Model
+/programs/*/
+
 # Internal development and evaluation records belong in the private sibling workspace
 /development/
 /evaluations/

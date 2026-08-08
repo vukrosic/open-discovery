@@ -69,6 +69,34 @@ Use this mode only when failed runs are cheap and reversible. A bounded
 session does not authorize external publication, spending, destructive action,
 or scope expansion unless those actions are explicitly included.
 
+### Hierarchy of Agents Research Model
+
+This optional experimental continuous-discovery mode uses three levels: one Lab CEO, one
+leader for each broad research direction, and an initial pool of three active
+background explorer agents under each leader. Leaders may adjust the pool when
+useful. Every explorer owns a distinct question and unique project folder, so
+evidence and failures remain attributable.
+
+The CEO chooses portfolio priorities, coordinates real resource conflicts, and
+keeps every direction staffed. Direction leaders choose and compare mechanisms,
+synthesize explorer evidence, and replace completed explorers with the next
+evidence-grounded project. Explorers run the actual reviews, experiments,
+proofs, and implementations.
+
+The CEO normally steers through the direction leader. It may contact an
+explorer directly when a leader is unavailable or a concrete stall, evidence
+problem, ownership conflict, or resource collision needs immediate correction;
+the leader is then informed so instructions do not conflict. A created folder
+or planned assignment does not count as an active explorer: the program record
+must contain a running agent ID.
+
+The three-explorer pool is a staffing rule, not a reason to invent busywork or
+run conflicting heavy jobs. An explorer waiting for exclusive compute should
+continue useful protocol, coding, literature, analysis, or CPU-safe work.
+Routine choices remain autonomous; spending, publication, private access, and
+external or destructive actions still require the authority recorded by the
+human.
+
 ## The collaboration loop
 
 1. The human defines the question and boundaries.

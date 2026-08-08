@@ -12,9 +12,18 @@ For an autonomous literature review with a PDF deliverable, use:
 
 `Use $literature-review to review [your topic] and deliver a PDF report.`
 
-Starberry creates the project, uses one research worker by default, records the
-scope and search method internally, and returns when the verified report is
-complete. You do not need to approve individual search steps or fill out the
+`Use $paper-implementer to reproduce [paper] as verified code.`
+
+`Use $feature-tester to run and test [feature, prompt, skill, workflow, or idea].`
+
+For continuous parallel discovery across several directions, use:
+
+`Run the Hierarchy of Agents Research Model on [research goal] and choose useful directions autonomously.`
+
+For a Literature Review, Starberry creates the project, uses one research
+worker by default, records the scope and search method internally, and returns
+when the verified report is complete. You do not need to approve individual
+search steps or fill out the
 project templates.
 
 Open the cloned Open Discovery repository with Codex, Claude, or another

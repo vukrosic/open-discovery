@@ -1,18 +1,8 @@
 # Contributing
 
-Open Discovery is still deciding its roadmap and validating the core system.
+Start with a [GitHub issue](https://github.com/vukrosic/open-discovery/issues)
+for feedback, ideas, bugs, questions, analysis, or discussion.
 
-## Request a change
-
-For feature requests, improvements, bugs, or new research-mode ideas, please
-[open a GitHub issue](https://github.com/vukrosic/open-discovery/issues).
-Explain the problem, who it affects, and what outcome you want. Examples are
-helpful.
-
-## Pull requests
-
-Please do not submit unsolicited pull requests yet. Discuss the request in an
-issue first and wait for maintainer approval before implementing it.
-
-This keeps development focused while we decide the roadmap, choose features,
-and make the existing research workflow work reliably.
+Please do not open unsolicited pull requests. Implementation and PRs are easy;
+the bottleneck is understanding what to do. Discuss the problem and direction
+first, then we can decide what to build.

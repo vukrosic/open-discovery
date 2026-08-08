@@ -29,10 +29,11 @@ manage document state unless they explicitly choose to do so.
    `PROJECT.md`.
 4. Never search `examples/`, `templates/`, `docs/`, or unrelated project folders
    for an active project. They are reference material or separate research.
-5. A new research question, Literature Review skill request, or Full Auto
-   request creates a new, unique project folder and copies in
-   `templates/project/`. Derive a short descriptive slug; if it already exists,
-   add a stable numeric or date suffix. Never silently reuse an existing folder.
+5. A new research question, Literature Review skill request, Paper Implementer
+   skill request, Feature Tester skill request, or Full Auto request creates a
+   new, unique project folder and copies in `templates/project/`. Derive a short
+   descriptive slug; if it already exists, add a stable numeric or date suffix.
+   Never silently reuse an existing folder.
 6. Resume an existing project only when the user explicitly asks to continue
    it or the chat is already operating from inside that project folder. A new
    Full Auto command always starts a new project unless the user explicitly
@@ -40,17 +41,35 @@ manage document state unless they explicitly choose to do so.
 7. Parallel agents must use different project folders. Never let two active
    tasks write to the same project. If another task appears to own a running
    project, stop and ask before taking it over.
-8. If no active project exists, tailor the first response to what the user
+8. The Hierarchy of Agents Research Model has three lightweight levels: the Lab
+   CEO coordinates broad research directions; one direction leader owns each
+   direction and its coordination folder under `programs/<direction-slug>/`;
+   independent explorer agents do the research, each in a unique
+   `projects/<project-slug>/` folder. Leaders compare evidence and steer their
+   direction, while explorers own distinct falsifiable approaches. Every
+   direction leader starts with three active background explorers, excluding
+   the leader, and may adjust that number when the work or available resources
+   justify it. Prefer Luna with high reasoning when available; otherwise use
+   the strongest suitable agent without interrupting the user. Replace
+   completed or stopped explorers when continued exploration remains useful;
+   do not add quotas, ceremonies, or routine approval gates.
+9. Never create a Git worktree for an Open Discovery research task. Launch new
+   native Codex chats directly in the saved main Open Discovery project and
+   give each explorer a unique `projects/<project-slug>/` folder. If an older
+   worktree-backed chat is explicitly redirected to a main-workspace project,
+   it must use that exact absolute path and must not keep writing its worktree
+   copy.
+10. If no active project exists, tailor the first response to what the user
    actually said. Acknowledge their stated goal, topic, idea, or uncertainty,
    briefly identify Starberry and the relevant part of Open Discovery, and
    move them toward the smallest useful next decision. Draw only the useful
    orientation from the welcome block below; use the full block only as a
    fallback when the user provides no meaningful direction. Do not discuss
    missing internal files or propose work from a teaching example.
-9. After the user provides a question, create the project folder and initialize
+11. After the user provides a question, create the project folder and initialize
    its files automatically. Ask for a location only when the user explicitly
    wants the project outside the standard local `projects/` workspace.
-10. When the user provides an existing folder path or repository URL, create a
+12. When the user provides an existing folder path or repository URL, create a
     complete `projects/<project-slug>/` Open Discovery record by copying every
     file from `templates/project/`, then point that record to the existing work.
     Record its exact location, relevant files, and working notes in
@@ -59,7 +78,7 @@ manage document state unless they explicitly choose to do so.
     not a valid resumable project. Do not move, duplicate, or modify the
     original project unless the user asks. Inspect it read-only first and follow
     any instructions defined inside that project when later work is authorized.
-11. Before creating a second record for existing work, check whether a project
+13. Before creating a second record for existing work, check whether a project
     under `projects/` already records the same location. Resume that record when
     appropriate instead of silently creating a duplicate.
 
@@ -82,6 +101,16 @@ decision. If no topic was supplied, choose one concrete review question. The
 preferred Codex worker is `gpt-5.6-luna` with maximum reasoning effort when the
 host supports that selection; otherwise continue with the strongest available
 agent without interrupting the user.
+
+For a Paper Implementer skill request, briefly identify Starberry and the skill,
+name the supplied paper or reference, and state that the first outcome will be
+a validated faithful baseline reproduction. Do not ask about environment
+adaptation, optimization, or integration before attempting that baseline.
+
+For a Feature Tester skill request, briefly name the target and state that the
+tester will run realistic isolated cases, inspect behavior and artifacts,
+report readiness honestly, and remove its temporary test material afterward.
+Do not ask the user to design routine cases when the target is clear.
 
 For an existing project, introduce yourself and the project in one short
 paragraph before proposing or executing work. State your role, the main
@@ -197,6 +226,17 @@ shared research loop without pretending specialized support exists.
     freeze the specification, search, synthesize, update every ledger, and
     produce and verify `REPORT.pdf` without waiting for per-step approval. Use
     one research worker by default and do not run experiments under this skill.
+16. When the Paper Implementer skill is invoked, create one implementation
+    project, preserve paper and upstream-code provenance, freeze the smallest
+    useful faithful target, implement and run it, and validate the observed
+    result before claiming reproduction. Only after that terminal baseline
+    should the agent offer adaptation, optimization, extension, comparison, or
+    stopping as one concise next choice.
+17. When the Feature Tester skill is invoked, freeze a small relevant test set,
+    run the real feature in isolated state, verify behavior independently, and
+    preserve a concise report and cleanup receipt. Remove only artifacts the
+    test created and can prove it owns; never delete source, user data, shared
+    caches, or ambiguous paths.
 
 ## Authority rule
 
@@ -218,6 +258,18 @@ unavailable action and record the limitation instead of stopping to request a
 broader permission. If a project-local dependency is installed, record its
 name, version, location, and purpose in `WORK-LOG.md` and disclose the
 installation in the final response.
+
+The Paper Implementer skill similarly records bounded authority for public
+paper retrieval, public repository cloning, project-local dependencies,
+execution, and non-destructive project-local edits. It does not authorize
+spending, outside compute, private assets, credentials, publication, external
+communication, or destructive changes.
+
+The Feature Tester skill records bounded authority for zero-cost local tests,
+fresh native test agents, disposable public downloads, and cleanup of exact
+registered test-owned artifacts. It does not authorize destructive testing on
+user data, changes to live services or accounts, spending, private access,
+publication, or deletion of anything with uncertain ownership.
 
 ## Stopping rule
 

@@ -24,8 +24,25 @@ needed to make that loop useful.
   limitations.
 - **Counterexample search:** actively look for cases that weaken the current
   claim.
+- **Novelty gate:** treat familiar effects and standard tradeoffs as baselines,
+  not discoveries. Before claiming a new finding, state the mechanism-specific
+  candidate claim, check primary literature and the relevant implementation,
+  run a falsification test, and label the outcome as a new local observation,
+  known result, negative result, or inconclusive evidence.
 - **Result writer:** turn the durable record into a short report or paper
   without overstating what was established.
+
+## Discovery standard
+
+Optimization alone is not a discovery. Prefer questions about why an effect
+occurs, what predicts it, where it fails, or what new mechanism could improve
+it. A useful research result may be positive or negative, but it must be more
+informative than restating a known speed, memory, quality, or cost tradeoff.
+
+Do not infer global novelty from a bounded search. Preserve exact searches and
+source identifiers, distinguish a new result on the local system from a broad
+research claim, and write `not novel`, `negative`, or `inconclusive` when that
+is what the evidence supports.
 
 When a project spans fields, choose one primary mode and record any secondary
 mode in `PROJECT.md`. Apply both guides only where they are relevant.
