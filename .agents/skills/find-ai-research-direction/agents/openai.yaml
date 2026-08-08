@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find AI Research Direction"
+  short_description: "Choose strong AI research questions and directions"
+  default_prompt: "Use $find-ai-research-direction to help me explore AI research directions and choose a concrete question."

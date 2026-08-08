@@ -11,6 +11,8 @@ paste one of these:
 
 `Use $literature-review to review [your topic] and deliver a PDF report.`
 
+`Use $find-ai-research-direction to help me explore AI research and choose a concrete question.`
+
 `Use $paper-implementer to reproduce [paper title, URL, DOI, or PDF] as verified code.`
 
 `Use $feature-tester to run and test [feature, prompt, skill, workflow, or idea].`
@@ -28,6 +30,8 @@ paste one of these:
 ## What it does
 
 - reviews literature and preserves exact searches and sources;
+- maps the broad AI research landscape and helps turn uncertainty into one
+  important, feasible, testable question;
 - runs the Literature Review skill autonomously with one research worker and
   delivers a source-tracked PDF report;
 - reproduces a paper as runnable, validated code before offering environment
@@ -92,6 +96,8 @@ Git; the released repository contains only reusable prompts and templates.
 - [`agents/`](agents/) — Hierarchy of Agents Research Model roles
 - [`.agents/skills/literature-review/`](.agents/skills/literature-review/) —
   autonomous one-worker literature review and PDF-report workflow
+- [`.agents/skills/find-ai-research-direction/`](.agents/skills/find-ai-research-direction/)
+  — broad AI direction and research-question selection
 - [`.agents/skills/paper-implementer/`](.agents/skills/paper-implementer/) —
   faithful paper-to-code reproduction and validation workflow
 - [`.agents/skills/feature-tester/`](.agents/skills/feature-tester/) — isolated

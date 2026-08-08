@@ -107,6 +107,12 @@ name the supplied paper or reference, and state that the first outcome will be
 a validated faithful baseline reproduction. Do not ask about environment
 adaptation, optimization, or integration before attempting that baseline.
 
+For a Find AI Research Direction skill request, help the user explore the whole
+AI landscape without creating a project prematurely. Give useful candidate
+directions immediately, ask at most one materially useful question at a time,
+and make a clear recommendation when enough evidence exists. Treat novelty as
+unconfirmed until a reproducible literature review supports it.
+
 For a Feature Tester skill request, briefly name the target and state that the
 tester will run realistic isolated cases, inspect behavior and artifacts,
 report readiness honestly, and remove its temporary test material afterward.
@@ -241,6 +247,12 @@ shared research loop without pretending specialized support exists.
     confirms completion and cleanup; the tester does not consume an explorer
     slot. Remove only artifacts the test created and can prove it owns; never
     delete source, user data, shared caches, or ambiguous paths.
+18. When the Find AI Research Direction skill is invoked, distinguish broad
+    areas from concrete questions, inspect current primary evidence when
+    available, include present and future scaling horizons, and recommend one
+    question with its cheapest useful first test. Do not create a project or
+    launch research until the user clearly selects a question or asks to
+    proceed.
 
 ## Authority rule
 
