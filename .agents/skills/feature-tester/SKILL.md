@@ -5,8 +5,26 @@ description: Run and robustly evaluate a feature, feature idea, prompt, agent, s
 
 # Feature Tester
 
-Test the feature as a real user or calling agent would encounter it. Preserve a
-small report; remove disposable test material.
+Test the feature as a real user or calling agent would encounter it. Run the
+test in a separate background task so development and the calling conversation
+remain available. Preserve a small report; remove disposable test material.
+
+## Execution model
+
+Do not run the feature test inline in the calling development or research
+conversation. The caller or Lab CEO launches one dedicated native Codex task
+for the complete test using `gpt-5.6-luna` with `xhigh` reasoning by default.
+If that model is unavailable, use the strongest suitable available agent and
+record the substitution. The dedicated tester may launch additional fresh test
+agents only when isolated conversations or useful parallel comparison require
+them.
+
+The calling conversation returns immediately after dispatch and remains free
+for development, experiments, and other work. The Lab CEO, when present,
+records the tester task ID, target, project path, resource use, and status;
+checks material progress without micromanaging; receives the final report; and
+confirms that test-owned processes and artifacts were cleaned up. A standalone
+caller performs the same lightweight supervision when no Lab CEO exists.
 
 ## Start
 
@@ -71,12 +89,12 @@ observable acceptance checks before seeing results.
 
 ## Run independent tests
 
-When native agents are available, launch fresh test agents using
-`gpt-5.6-luna` with `xhigh` reasoning. Use separate agents only where clean
-conversation state or genuine parallel comparison matters; do not create an
-arbitrary swarm. Give each agent its own sandbox subdirectory and no writable
-access to another case's state. Use `references/test-worker-prompt.md` as the
-base assignment.
+When additional native test agents are useful, launch them using
+`gpt-5.6-luna` with `xhigh` reasoning by default. Use separate agents only where
+clean conversation state or genuine parallel comparison matters; do not create
+an arbitrary swarm. Give each agent its own sandbox subdirectory and no
+writable access to another case's state. Use
+`references/test-worker-prompt.md` as the base assignment.
 
 When fresh agents are unavailable, run cases sequentially with explicit state
 reset and mark conversation-isolation coverage accurately.

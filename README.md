@@ -33,7 +33,8 @@ paste one of these:
 - reproduces a paper as runnable, validated code before offering environment
   adaptation, optimization, or extension;
 - runs realistic isolated feature tests, reports readiness, and cleans its
-  temporary agents, downloads, caches, and generated artifacts;
+  temporary agents, downloads, caches, and generated artifacts in a separate
+  background task, leaving development and research conversations available;
 - proposes, freezes, and runs experiments or proof investigations;
 - records evidence, failures, negative results, and decisions;
 - keeps work resumable from files instead of chat history;

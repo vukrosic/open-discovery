@@ -233,10 +233,14 @@ shared research loop without pretending specialized support exists.
     should the agent offer adaptation, optimization, extension, comparison, or
     stopping as one concise next choice.
 17. When the Feature Tester skill is invoked, freeze a small relevant test set,
-    run the real feature in isolated state, verify behavior independently, and
-    preserve a concise report and cleanup receipt. Remove only artifacts the
-    test created and can prove it owns; never delete source, user data, shared
-    caches, or ambiguous paths.
+    dispatch it as a separate background Codex task using Luna with high
+    reasoning by default, run the real feature in isolated state, verify
+    behavior independently, and preserve a concise report and cleanup receipt.
+    The calling development or research conversation must remain available for
+    other work. When a Lab CEO exists, it supervises the tester directly and
+    confirms completion and cleanup; the tester does not consume an explorer
+    slot. Remove only artifacts the test created and can prove it owns; never
+    delete source, user data, shared caches, or ambiguous paths.
 
 ## Authority rule
 

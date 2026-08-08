@@ -1,4 +1,4 @@
 interface:
   display_name: "Feature Tester"
   short_description: "Test features, prompts, skills, and workflows"
-  default_prompt: "Use $feature-tester to run and robustly test this feature, report the result, and clean temporary artifacts."
+  default_prompt: "Use $feature-tester in a separate background Luna task to robustly test this feature, report the result, and clean temporary artifacts."
