@@ -1,6 +1,6 @@
 interface:
   display_name: "Literature Review"
   short_description: "Autonomous, source-tracked literature review"
-  default_prompt: "Use $literature-review to create an Open Discovery project, run one autonomous literature-review worker, and deliver a verified PDF report."
+  default_prompt: "Use $literature-review to create an Open Discovery initiative, run one autonomous review project, and deliver a verified source-tracked PDF report."
 policy:
   allow_implicit_invocation: true

@@ -1,119 +1,103 @@
 # Open Discovery
 
-Open Discovery is an open-source, Markdown-first research harness for coding
-agents. Its research partner, **Starberry**, turns a question or existing
-project into a durable research loop.
+Open Discovery is an open-source, prompt-first research harness for coding
+agents. Its research partner, **Starberry**, turns one human idea into an
+autonomous initiative containing as many independent projects as the work
+needs.
 
 ## Start
 
-Open this repository with Codex, Claude, or another file-capable agent and
-paste one of these:
+Open this repository with Codex, Claude, or another file-capable agent and say:
 
-`Use $literature-review to review [your topic] and deliver a PDF report.`
+`Investigate ways to make small language models faster on my MacBook.`
 
-`Use $find-ai-research-direction to help me explore AI research and choose a concrete question.`
+`Try to solve or make progress on this mathematics problem: ...`
 
-`Use $paper-implementer to reproduce [paper title, URL, DOI, or PDF] as verified code.`
+`Reproduce this paper: ...`
 
-`Use $feature-tester to run and test [feature, prompt, skill, workflow, or idea].`
+`Review the literature on ... and write a PDF report.`
 
-`Run the Hierarchy of Agents Research Model on [research goal] and choose useful directions autonomously.`
+`Choose a worthwhile AI research direction and pursue it autonomously.`
 
-`Do research and write a paper fully autonomously on [your topic].`
+Starberry records the request once and handles routine research decisions
+without making the researcher manage forms, files, agents, or approvals.
 
-`Do research and write a paper fully autonomously; choose the field and topic for me.`
+## Architecture
 
-`Chat with me first and help me choose a research idea and direction.`
+```text
+Human brief
+└── Initiative
+    ├── Project A
+    │   └── reviews, code, experiments, evidence, verification
+    ├── Project B
+    ├── Project C ...
+    └── One canonical GitHub-ready repository artifact
+```
 
-`Add my existing project to Open Discovery: [folder path or repository URL].`
+An **initiative** is everything generated from one human request. A **project**
+is one independently testable question or engineering approach. Initiative
+leaders generate and compare projects; explorer agents own individual
+projects. A separate Scientific Reviewer can judge mature results using
+field-appropriate criteria, and a Research Communicator can turn accepted
+claims into accurate public drafts without publishing them.
 
-## What it does
+Each initiative produces one canonical GitHub-ready repository artifact for the
+initiative as a whole, not one repository per project. A Repository Artifact
+Builder assembles inspected project outputs into that single package and keeps
+updating it as the initiative develops. It may include runnable setup,
+representative positive and negative results, prompts, provenance, and guidance
+for another human or agent to reproduce and continue the work. Local packaging
+does not automatically create or publish a GitHub remote.
 
-- reviews literature and preserves exact searches and sources;
-- maps the broad AI research landscape and helps turn uncertainty into one
-  important, feasible, testable question;
-- runs the Literature Review skill autonomously with one research worker and
-  delivers a source-tracked PDF report;
-- reproduces a paper as runnable, validated code before offering environment
-  adaptation, optimization, or extension;
-- runs realistic isolated feature tests, reports readiness, and cleans its
-  temporary agents, downloads, caches, and generated artifacts in a separate
-  background task, leaving development and research conversations available;
-- proposes, freezes, and runs experiments or proof investigations;
-- records evidence, failures, negative results, and decisions;
-- keeps work resumable from files instead of chat history;
-- can turn the resulting record into a report or paper.
+Live work is organized as:
 
-The loop is:
+```text
+initiatives/<initiative>/
+├── BRIEF.md
+└── projects/
+    └── <project>/
+```
 
-> question → literature → idea → experiment or proof → evidence → paper
+`BRIEF.md` is the only required research filename. Agents choose the remaining
+files, tools, code, and project organization according to the work. Open
+Discovery deliberately has no blank research templates and no fixed runtime.
+
+## What the harness provides
+
+- [`AGENTS.md`](AGENTS.md) — Starberry's operating behavior
+- [`agents/`](agents/) — research hierarchy, review, communication, and
+  repository-artifact prompts
+- [`.agents/skills/`](.agents/skills/) — autonomous research and focused skills
+- [`docs/`](docs/) — evidence, collaboration, and operating guidance
+- [`research-modes/`](research-modes/) — optional field-specific guidance
+
+The harness provides prompts, responsibility boundaries, evidence standards,
+and durable-state principles. Agents generate the actual research structure and
+code they need.
+
+For a continuing multi-initiative lab, local ignored files such as
+`lab/MISSION.md` and `lab/CONSTRAINTS.md` can define that lab's purpose and
+resource limits. They configure one lab instance and do not change Open
+Discovery's general behavior for other researchers.
+
+## Default autonomy
+
+Auto mode is the default for local, zero-cost, non-destructive research implied
+by the user's request. Spending, outside compute, publication, external
+communication, private access, credentials, and destructive actions still
+require explicit authority.
 
 ## Current fields
 
-Open Discovery currently includes dedicated modes for:
-
-- [AI and machine learning](research-modes/AI-MACHINE-LEARNING.md)
-- [Mathematics](research-modes/MATHEMATICS.md)
-- [Biology](research-modes/BIOLOGY.md)
-
-> “We believe the biggest positive impacts of AI will be in biology and
-> medicine.”
->
-> — Anthropic, [AI for Science Program](https://www.anthropic.com/news/ai-for-science-program)
-
-## How projects work
-
-Starberry creates each project under `projects/<project-slug>/`. That directory
-is ignored by Git, so questions, experiments, data, and papers stay local and
-do not enter the public harness history.
-
-Existing work can remain elsewhere. Starberry creates a local record pointing
-to its folder or repository without moving or modifying the original unless
-you request it.
-
-## Hierarchy of Agents Research Model
-
-This experimental model supports continuous multi-project discovery using
-three agent levels:
-
-1. A Lab CEO coordinates the portfolio and shared resources.
-2. One direction leader compares evidence and steers each research direction.
-3. Direction leaders start with three independent explorers testing distinct
-   ideas in separate project folders, then adjust the pool when useful.
-
-Luna with high reasoning is the preferred runtime when available; other
-capable agents may be used without changing the architecture.
-
-When an explorer finishes, its evidence is preserved and the leader starts the
-next evidence-grounded project. The CEO normally steers through leaders, but
-may contact an explorer directly to resolve a concrete stall, evidence problem,
-or resource conflict. Live programs and projects remain local and ignored by
-Git; the released repository contains only reusable prompts and templates.
-
-## What is included
-
-- [`AGENTS.md`](AGENTS.md) — Starberry’s operating instructions
-- [`agents/`](agents/) — Hierarchy of Agents Research Model roles
-- [`.agents/skills/literature-review/`](.agents/skills/literature-review/) —
-  autonomous one-worker literature review and PDF-report workflow
-- [`.agents/skills/find-ai-research-direction/`](.agents/skills/find-ai-research-direction/)
-  — broad AI direction and research-question selection
-- [`.agents/skills/paper-implementer/`](.agents/skills/paper-implementer/) —
-  faithful paper-to-code reproduction and validation workflow
-- [`.agents/skills/feature-tester/`](.agents/skills/feature-tester/) — isolated
-  testing for features, prompts, agents, skills, workflows, and ideas
-- [`templates/`](templates/) — project, review, implementation, and experiment records
-- [`docs/QUICKSTART.md`](docs/QUICKSTART.md) — complete workflow
-- [`docs/EVIDENCE-STANDARD.md`](docs/EVIDENCE-STANDARD.md) — evidence rules
-- [`docs/HUMAN-AI-COLLABORATION.md`](docs/HUMAN-AI-COLLABORATION.md) — human and AI roles
-- [`examples/robust-summary/`](examples/robust-summary/) — completed worked example
+Open Discovery includes guidance for AI and machine learning, mathematics, and
+biology. The architecture also supports engineering and other evidence-driven
+work without pretending specialized guidance exists where it does not.
 
 ## Limits
 
-Version 0.3.0 is a Markdown harness, not a server or agent framework. The agent
-must have file access and the tools required by the research. A completed paper
-is not automatically correct, peer reviewed, or published; its claims remain
-limited by the preserved evidence.
+Open Discovery is a prompt-driven harness, not a server or cloud scheduler. A
+completed paper or result is not automatically correct, peer reviewed, novel,
+or published; claims remain limited by their preserved evidence.
 
 ## License
 

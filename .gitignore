@@ -1,13 +1,18 @@
-# Local research projects created through Open Discovery
-/projects/
+# Local autonomous initiatives and their nested research projects
+/initiatives/
 
-# Local running instances of the Hierarchy of Agents Research Model
+# Local lab coordination state
+/lab/
+
+# Legacy local research state retained during migration
+/projects/
 /programs/*/
 
 # Internal development and evaluation records belong in the private sibling workspace
 /development/
 /evaluations/
 /test-runs/
+/tmp/
 
 # Local machine and environment state
 .DS_Store

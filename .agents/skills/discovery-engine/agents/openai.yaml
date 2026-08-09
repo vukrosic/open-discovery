@@ -1,0 +1,4 @@
+interface:
+  display_name: "Discovery Engine"
+  short_description: "Turn one brief into autonomous research projects"
+  default_prompt: "Use $discovery-engine to turn my idea into an autonomous initiative, generate and run the projects it needs, and return with verified findings."

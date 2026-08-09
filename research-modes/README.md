@@ -45,4 +45,5 @@ research claim, and write `not novel`, `negative`, or `inconclusive` when that
 is what the evidence supports.
 
 When a project spans fields, choose one primary mode and record any secondary
-mode in `PROJECT.md`. Apply both guides only where they are relevant.
+mode in the project's own durable notes. Apply both guides only where they are
+relevant.

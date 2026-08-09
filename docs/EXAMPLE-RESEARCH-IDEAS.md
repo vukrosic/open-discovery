@@ -1,8 +1,8 @@
 # Example research ideas
 
 These examples show the kinds of starting directions a researcher can bring to
-Open Discovery. They are prompts for discussion, not approved experiments or
-claims of novelty.
+Open Discovery. They are starting points, not claims of novelty. An autonomous
+initiative may select, sharpen, reject, or replace them from evidence.
 
 ## Faster LLM reinforcement-learning rollouts
 

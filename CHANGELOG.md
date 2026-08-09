@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased
+
+- Made autonomous execution the default for local, zero-cost,
+  non-destructive work implied by the human brief.
+- Replaced the split program/global-project model with initiatives that own
+  their AI-generated projects.
+- Made `BRIEF.md` the only fixed human-facing research file.
+- Added the `$discovery-engine` skill and initiative-leader role.
+- Removed reusable blank research templates and deterministic skill helpers;
+  agents now choose their own project structure, code, and tools.
+- Preserved sole-writer isolation, evidence standards, and explicit authority
+  boundaries without mandatory ledgers or per-experiment approval gates.
+- Added optional local `lab/MISSION.md` and `lab/CONSTRAINTS.md` configuration
+  for continuing multi-initiative labs without changing other researchers'
+  default goals.
+- Added adaptive Scientific Reviewer and Research Communicator roles for
+  field-aware publishability judgments and accurate human-approved public
+  drafts.
+- Added continuous dogfooding guidance for realistic research and scientist
+  interactions, including resource reuse, correction and pivot handling,
+  stable-snapshot evaluation, and separate-owner verification semantics.
+
 ## 0.3.0 — 2026-08-07
 
 - Added the repo-scoped `$literature-review` skill.
