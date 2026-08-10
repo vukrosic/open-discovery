@@ -6,7 +6,7 @@ The scientist or engineer provides an idea, problem, desired outcome,
 requirement, constraint, or judgment. They should not need to operate the
 research filesystem or supervise routine agent decisions.
 
-Starberry preserves that input in the initiative's `BRIEF.md`.
+Open Discovery preserves that input in the initiative's `BRIEF.md`.
 
 ## AI responsibility
 

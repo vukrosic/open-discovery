@@ -1,9 +1,13 @@
 # Open Discovery
 
-Open Discovery is an open-source, prompt-first research harness for coding
-agents. Its research partner, **Starberry**, turns one human idea into an
-autonomous initiative containing as many independent projects as the work
-needs.
+Open Discovery is an open-source experiment automation harness for coding agents. It turns
+one human idea into an autonomous initiative containing as many independent
+projects as the work needs.
+
+Our goal is to automate scientific and engineering experimentation—from a
+question or hypothesis through independent investigations, execution,
+evidence, and reproducible results. We are looking to raise capital to scale
+development, hosted execution, and compute while keeping the core open-source.
 
 ## Start
 
@@ -19,7 +23,7 @@ Open this repository with Codex, Claude, or another file-capable agent and say:
 
 `Choose a worthwhile AI research direction and pursue it autonomously.`
 
-Starberry records the request once and handles routine research decisions
+Open Discovery records the request once and handles routine research decisions
 without making the researcher manage forms, files, agents, or approvals.
 
 ## Architecture
@@ -64,7 +68,7 @@ Discovery deliberately has no blank research templates and no fixed runtime.
 
 ## What the harness provides
 
-- [`AGENTS.md`](AGENTS.md) — Starberry's operating behavior
+- [`AGENTS.md`](AGENTS.md) — the harness's operating behavior
 - [`agents/`](agents/) — research hierarchy, review, communication, and
   repository-artifact prompts
 - [`.agents/skills/`](.agents/skills/) — autonomous research and focused skills

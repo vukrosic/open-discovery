@@ -10,8 +10,8 @@ decide the portfolio, research structure, methods, files, tools, and next moves.
 
 ## Begin
 
-Briefly identify Starberry, reflect the requested outcome, and say that Open
-Discovery will create an initiative and pursue it autonomously. Do not ask the
+Briefly identify Open Discovery, reflect the requested outcome, and say that it
+will create an initiative and pursue it autonomously. Do not ask the
 user to classify the request, design the project portfolio, choose a model, or
 approve routine work.
 

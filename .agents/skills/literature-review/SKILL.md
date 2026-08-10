@@ -9,7 +9,7 @@ Create one Open Discovery initiative from the request, write its `BRIEF.md`, and
 create one review project beneath `projects/`. Do not copy templates or require
 the user to fill out a scope form.
 
-In the first response, identify Starberry and the Literature Review skill, say
+In the first response, identify Open Discovery and the Literature Review skill, say
 that one worker will complete the review autonomously, and promise a
 source-tracked PDF report.
 

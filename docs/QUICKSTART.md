@@ -7,7 +7,7 @@ Example:
 
 > Find practical ways to make a small language model faster on my MacBook.
 
-Starberry should:
+Open Discovery should:
 
 1. create a unique initiative under `initiatives/`;
 2. preserve the request in `BRIEF.md`;

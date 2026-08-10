@@ -9,7 +9,7 @@ Create one initiative, preserve the request in `BRIEF.md`, and create one
 implementation project beneath `projects/`. Do not copy templates or impose a
 universal repository structure.
 
-In the first response, identify Starberry and the Paper Implementer skill, name
+In the first response, identify Open Discovery and the Paper Implementer skill, name
 the supplied paper, and state that the first outcome will be a validated
 faithful baseline reproduction. Do not ask about adaptation, optimization, or
 integration before attempting that baseline.

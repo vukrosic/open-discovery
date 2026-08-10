@@ -65,7 +65,7 @@
   repositories.
 - Added shared research tools and dedicated operating modes for AI/ML,
   mathematics, and biology.
-- Named the user-facing Open Discovery research partner Starberry.
+- Added user-facing Open Discovery research-partner behavior.
 - Tested independent AI/ML, mathematics, biology, external-project, duplicate,
   and Full Auto routing scenarios before release.
 
