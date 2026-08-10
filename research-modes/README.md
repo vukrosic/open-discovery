@@ -6,6 +6,7 @@ Open Discovery includes these research modes:
 2. [Mathematics](MATHEMATICS.md)
 3. [Biology](BIOLOGY.md)
 4. [Algorithm optimization](ALGORITHM-OPTIMIZATION.md)
+5. [Program evolution](../program-evolution/README.md)
 
 Every project uses the same question, literature, idea, experiment, evidence,
 and findings loop. The mode guide adds the field-specific checks and records

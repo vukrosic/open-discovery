@@ -108,7 +108,8 @@ require explicit authority.
 ## Current modes
 
 Open Discovery includes guidance for AI and machine learning, mathematics,
-biology, and cross-domain algorithm optimization. The architecture also
+biology, cross-domain algorithm optimization, and evaluator-driven
+[program evolution](program-evolution/README.md). The architecture also
 supports engineering and other evidence-driven work without pretending
 specialized guidance exists where it does not.
 

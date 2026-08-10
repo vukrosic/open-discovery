@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.5.0 — 2026-08-10
+
 - Made autonomous execution the default for local, zero-cost,
   non-destructive work implied by the human brief.
 - Replaced the split program/global-project model with initiatives that own
@@ -21,6 +23,15 @@
 - Added continuous dogfooding guidance for realistic research and scientist
   interactions, including resource reuse, correction and pivot handling,
   stable-snapshot evaluation, and separate-owner verification semantics.
+- Added Program Evolution for improving a supplied baseline against an
+  external evaluator while preserving immutable inputs and candidate lineage.
+- Added reusable baseline locking, benchmark recording, result summarization,
+  and blind versus open-book capability tracks.
+- Added exact local benchmarks for image histograms and power dispatch plus a
+  pinned frontier benchmark based on NetworkX bounded-cycle search.
+- Expanded Open Discovery from scientific research into general
+  evaluator-driven algorithm optimization without weakening correctness or
+  no-regression requirements.
 
 ## 0.3.0 — 2026-08-07
 

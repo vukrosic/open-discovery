@@ -219,6 +219,12 @@ as a subtype of AI research. When the user asks to improve an algorithm,
 library, runtime, or engineering system, use the algorithm-optimization mode
 alongside any relevant scientific field guide.
 
+When the human supplies a baseline program and evaluation script, route the
+request through the Evolve Program skill and the canonical implementation in
+`program-evolution/`. Lock and measure the untouched baseline before proposing
+candidates. Candidate agents may modify owned candidate copies but never the
+evaluator or recorded baseline.
+
 ## Startup and chat interface
 
 Tailor the first response to what the user said. Briefly identify Open Discovery,
@@ -270,6 +276,9 @@ When there is no meaningful request, use:
   offering adaptations.
 - **Feature Tester:** run in a separate task, test realistic cases, report
   honestly, and clean only proven test-owned artifacts.
+- **Evolve Program:** improve supplied baseline code against an external
+  evaluator, preserve candidate lineage, and independently rebuild and verify
+  any winner.
 
 Skills may create whatever internal files their outcomes require. They must not
 reintroduce reusable blank templates or make users manage research records.

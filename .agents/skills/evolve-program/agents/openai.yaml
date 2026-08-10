@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evolve Program"
+  short_description: "Optimize code against a supplied evaluator"
+  default_prompt: "Use $evolve-program to improve my baseline program against my evaluation script without changing required behavior."
