@@ -9,6 +9,9 @@ question or hypothesis through independent investigations, execution,
 evidence, and reproducible results. We are looking to raise capital to scale
 development, hosted execution, and compute while keeping the core open-source.
 
+I am also looking for technical cofounders who want to apply to Y Combinator
+and build Open Discovery with me — people who can conduct scientific research or build systems.
+
 ## Start
 
 Open this repository with Codex, Claude, or another file-capable agent and say:
@@ -22,6 +25,13 @@ Open this repository with Codex, Claude, or another file-capable agent and say:
 `Review the literature on ... and write a PDF report.`
 
 `Choose a worthwhile AI research direction and pursue it autonomously.`
+
+## Examples
+
+[Qwen3 Prompt Lookup Robustness](https://github.com/vukrosic/qwen3-prompt-lookup-robustness)
+is a research repository produced by AI agents using Open Discovery. The system autonomously investigated how to run Qwen3-0.6B faster
+on an Apple-Silicon MacBook, executed reproducible benchmarks, and found that
+fixed two-token prompt lookup was 30.4% faster than ordinary greedy decoding while producing exactly the same tokens.
 
 Open Discovery records the request once and handles routine research decisions
 without making the researcher manage forms, files, agents, or approvals.
