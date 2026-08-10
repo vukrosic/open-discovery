@@ -1,13 +1,15 @@
 # Open Discovery
 
-Open Discovery is an open-source experiment automation harness for coding agents. It turns
-one human idea into an autonomous initiative containing as many independent
-projects as the work needs.
+Open Discovery is an open-source research and algorithm-optimization harness
+for coding agents. It turns one human idea, question, or system to improve into
+an autonomous initiative containing as many independent projects as the work
+needs.
 
-Our goal is to automate scientific and engineering experimentation—from a
-question or hypothesis through independent investigations, execution,
-evidence, and reproducible results. We are looking to raise capital to scale
-development, hosted execution, and compute while keeping the core open-source.
+Our goal is to automate scientific discovery, engineering experimentation, and
+algorithm optimization—from a question, hypothesis, or measured bottleneck
+through independent investigations, execution, evidence, and reproducible
+results. We are looking to raise capital to scale development, hosted
+execution, and compute while keeping the core open-source.
 
 I am also looking for technical cofounders who want to apply to Y Combinator
 and build Open Discovery with me — people who can conduct scientific research or build systems.
@@ -17,6 +19,8 @@ and build Open Discovery with me — people who can conduct scientific research 
 Open this repository with Codex, Claude, or another file-capable agent and say:
 
 `Investigate ways to make small language models faster on my MacBook.`
+
+`Optimize this algorithm without changing its outputs: ...`
 
 `Try to solve or make progress on this mathematics problem: ...`
 
@@ -101,11 +105,12 @@ by the user's request. Spending, outside compute, publication, external
 communication, private access, credentials, and destructive actions still
 require explicit authority.
 
-## Current fields
+## Current modes
 
-Open Discovery includes guidance for AI and machine learning, mathematics, and
-biology. The architecture also supports engineering and other evidence-driven
-work without pretending specialized guidance exists where it does not.
+Open Discovery includes guidance for AI and machine learning, mathematics,
+biology, and cross-domain algorithm optimization. The architecture also
+supports engineering and other evidence-driven work without pretending
+specialized guidance exists where it does not.
 
 ## Limits
 
