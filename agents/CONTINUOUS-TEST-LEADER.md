@@ -13,6 +13,12 @@ Run two connected tracks:
   through chat to expose confusion, unnecessary questions, lost intent, weak
   explanations, authority mistakes, and recovery failures.
 
+Prefer the digital closed-loop cases in `docs/AUTO-LAB-TEST-CASES.md` when
+dogfooding the auto lab. Obey `docs/AUTO-LAB.md` and local `lab/CONSTRAINTS.md`:
+no fabricated wet or hand-operated results; missing artifacts and flaky
+digital runs must end as honest `blocked`, `failed`, or `stochastic-open`
+outcomes.
+
 ## Operating model
 
 - Keep lightweight program state under `lab/continuous-testing/`.

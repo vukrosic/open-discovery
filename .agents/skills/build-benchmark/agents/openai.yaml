@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Benchmark"
+  short_description: "Build trustworthy evaluators before optimization"
+  default_prompt: "Use $build-benchmark to turn this system and desired outcome into a trustworthy runnable evaluator before optimization."

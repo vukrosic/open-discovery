@@ -24,10 +24,38 @@ code layout, but must preserve:
 - every material deviation, inference, failure, and missing detail;
 - observed validation evidence and the limits of the reproduction claim.
 
-Prefer official code. If none exists, clearly label the result a
-reimplementation. Run the baseline and inspect its actual outputs before
+Prefer official code. Run the baseline and inspect its actual outputs before
 claiming reproduction. Only after a terminal baseline should the agent offer or
 autonomously pursue adaptation when the original brief requests it.
+
+## Stop and ask the human on missing code or a big gap
+
+Do **not** invent a full paper implementation to paper over missing artifacts or
+an underspecified method. Stop the autonomous loop, set the project
+`blocked`, and ask the human one concise question when any of these hold:
+
+- no usable official or author code (and no clearly licensed reference
+  implementation) for the claim being reproduced;
+- required data, checkpoints, or assets are unavailable under current
+  authority;
+- the paper leaves a **big gap**: the central method, training recipe,
+  preprocessing, splits, hyperparameters, or evaluation details are too vague
+  for a faithful reproduction without guessing;
+- two or more incompatible implementations are equally consistent with the
+  text, and the choice would change the scientific claim;
+- a digital validation gate for the chosen central claim cannot be defined or
+  executed.
+
+When stopping, report exactly what is missing, what was already tried, and the
+options (provide code/data, narrow the claim, authorize an explicitly labeled
+best-effort reimplementation, or abort). Do not claim reproduction, do not
+fabricate results, and do not silently proceed on speculative invention.
+
+Small, recorded inferences (pinning an obvious dependency version, filling a
+routine boilerplate path) may continue when they cannot change the claim.
+Large creative reimplementation requires explicit human approval first. If the
+human approves a best-effort reimplementation, label it as such — never as a
+faithful reproduction.
 
 Invocation authorizes public paper and repository retrieval, zero-cost public
 downloads, project-local dependencies, code execution, and non-destructive

@@ -1,0 +1,32 @@
+{
+  "artifacts_preserved": [
+    "predictions.csv",
+    "feature_scores.csv",
+    "figure.svg"
+  ],
+  "claim_scope": "fresh and frozen synthetic benchmark cohorts only",
+  "confirmation_sha256": "4cb3815056373058006caba143dbae2172888e8656009a72914055ceb4073a60",
+  "failures": [],
+  "improved": true,
+  "schema_version": 2,
+  "stages": {
+    "confirmation": {
+      "baseline_cohort_roc_auc": [0.78, 0.8166666666666667, 0.79875],
+      "baseline_mean_roc_auc": 0.7984722222222222,
+      "candidate_auc_range": 0.03750000000000009,
+      "candidate_cohort_roc_auc": [0.90875, 0.9388888888888889, 0.94625],
+      "candidate_mean_roc_auc": 0.9312962962962963,
+      "mean_auc_improvement": 0.13282407407407404
+    },
+    "development": {
+      "baseline_cohort_roc_auc": [0.8111111111111111, 0.8844444444444445, 0.8144444444444444],
+      "baseline_mean_roc_auc": 0.8366666666666667,
+      "candidate_auc_range": 0.03555555555555556,
+      "candidate_cohort_roc_auc": [0.9422222222222222, 0.9677777777777777, 0.9322222222222222],
+      "candidate_mean_roc_auc": 0.9474074074074074,
+      "mean_auc_improvement": 0.1107407407407407
+    }
+  },
+  "status": "SUPPORTED",
+  "valid": true
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build a Skill"
+  short_description: "Create and test an adaptable agent skill"
+  default_prompt: "Use $build-skill to turn this capability into a concise, tested Open Discovery skill."

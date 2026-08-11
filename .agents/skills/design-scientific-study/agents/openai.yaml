@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Scientific Study"
+  short_description: "Turn questions into execution-ready study plans"
+  default_prompt: "Use $design-scientific-study to turn this scientific question, hypothesis, resources, and constraints into an execution-ready study plan."

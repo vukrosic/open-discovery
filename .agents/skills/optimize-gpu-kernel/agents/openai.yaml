@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize GPU Kernel"
+  short_description: "Write and verify faster GPU kernels"
+  default_prompt: "Use $optimize-gpu-kernel to write or optimize this GPU kernel and verify correctness and speed on the target hardware."

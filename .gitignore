@@ -14,6 +14,9 @@
 /test-runs/
 /tmp/
 
+# Experimental skill prototypes and evaluation artifacts
+/skill-lab/
+
 # Local machine and environment state
 .DS_Store
 .env

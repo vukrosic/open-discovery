@@ -2,6 +2,36 @@
 
 ## Unreleased
 
+- Added the auto-lab operating rule (`docs/AUTO-LAB.md`): only full computer
+  cycles an agent can complete without human hands, including dry
+  therapeutics and other in silico science.
+- `$paper-implementer` and auto-lab policy now require stop-and-ask when code
+  is missing or a paper has a big methodological gap; no invented
+  “reproduction.”
+- Added committed dogfood case specs (`docs/AUTO-LAB-TEST-CASES.md`) for
+  optimization, ML systems, computational biology, in silico therapeutics,
+  astro/physics reproduction, and mess/scope controls; live runs stay
+  gitignored under `initiatives/` and `lab/`.
+- Added the `$build-skill` workflow for turning rough capabilities into concise,
+  repository-owned skills with adaptive validation and minimal scaffolding.
+- Added `$find-startup-skill-ideas` for researching current startup products,
+  extracting their concrete workflows, and recommending distinct testable
+  skills that can reveal future product demand.
+- Added the `$deep-strategy-research` workflow for autonomous, decision-grade
+  strategic research with sourced option and scenario analysis, recommendations,
+  and concise executive summaries.
+- Added focused workflows for benchmark construction, agent and inference
+  optimization, GPU-kernel authoring and tuning, scientific study design,
+  dataset curation, data analysis, mathematical formalization, agent red
+  teaming, research-result auditing, research packaging, and evidence-backed
+  portfolio status.
+- Reframed the current product as a free, self-run collection of research and
+  optimization workflows, with hosted infrastructure deferred until repeated
+  user demand identifies the missing operational layer.
+- Added one user-facing workflow catalog and a concise workflow chooser for
+  first-run onboarding.
+- Added a Claude Code repository entrypoint without duplicating skill files.
+
 ## 0.5.0 — 2026-08-10
 
 - Made autonomous execution the default for local, zero-cost,

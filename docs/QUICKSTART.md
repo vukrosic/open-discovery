@@ -24,10 +24,23 @@ organization.
 Use a focused skill when appropriate:
 
 - `$discovery-engine` for a complete autonomous initiative;
+- `$design-scientific-study`, `$curate-research-dataset`, and
+  `$analyze-scientific-data` for the study lifecycle;
+- `$evolve-program` to improve code against an external evaluator or benchmark;
+- `$optimize-gpu-kernel`, `$optimize-inference`, or `$optimize-agent` for
+  specialized optimization;
 - `$find-ai-research-direction` to discuss and select an AI question;
 - `$literature-review` for a source-tracked PDF review;
 - `$paper-implementer` for faithful paper reproduction;
-- `$feature-tester` for isolated testing and cleanup.
+- `$feature-tester`, `$red-team-agent`, or `$audit-research-result` for
+  different kinds of verification;
+- `$package-research` for a GitHub-ready local handoff;
+- `$research-cockpit` for a concise evidence-backed status view.
+- `$find-startup-skill-ideas` and `$build-skill` to discover and implement new
+  agent workflows.
+
+See [`WORKFLOWS.md`](../WORKFLOWS.md) for inputs, outputs, and copyable examples
+for every workflow.
 
 Auto mode covers local, zero-cost, non-destructive research implied by the
 request. Spending, outside compute, publication, external communication,

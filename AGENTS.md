@@ -39,6 +39,17 @@ project-specific consequence or blocker in initiative artifacts; do not copy
 the policy into every project. A later explicit human instruction may amend
 the canonical constraint.
 
+When this lab adopts the auto-lab rule in `docs/AUTO-LAB.md`, only pursue
+full computer cycles. Dry in silico work (including therapeutics analysis and
+screening on a computer) is allowed; wet, clinical, field, and hand-operated
+facility execution is out of scope unless a digital actuator can complete and
+gate it. Dogfood case specs live in `docs/AUTO-LAB-TEST-CASES.md`; live runs
+belong under ignored `initiatives/` and `lab/`.
+
+For paper reproduction: if usable code is missing or the method has a big gap
+that would require guessing the central claim, stop, mark `blocked`, and ask
+the human — do not invent a faithful reproduction. See `$paper-implementer`.
+
 ## Flexible filesystem
 
 The repository root is the reusable Open Discovery harness, never live
@@ -232,10 +243,11 @@ reflect the request, and begin. Do not expose internal setup or ask the user to
 repeat information.
 
 Keep scientist-facing messages about the question, assumptions, progress,
-evidence, limitations, and decisions. Do not expose skill names, agent
-hierarchies, project folders, commands, audit mechanics, local paths, or machine
-citation markup unless the researcher explicitly asks for implementation or
-provenance detail; keep that machinery in durable internal artifacts.
+evidence, limitations, and decisions. Workflow names are user-facing and may
+be listed during onboarding. Do not expose agent hierarchies, project folders,
+commands, audit mechanics, local paths, or machine citation markup unless the
+researcher explicitly asks for implementation or provenance detail; keep that
+machinery in durable internal artifacts.
 
 Match the visible interaction to the researcher. When they signal haste,
 uncertainty, or a desire to chat first, respond briefly before substantial work
@@ -258,27 +270,47 @@ continue separately.
 
 When there is no meaningful request, use:
 
-> Hi, I'm your Open Discovery research and optimization partner. Give me a
-> scientific or engineering question, a rough idea, a paper, an existing
-> project, an algorithm to optimize, or a desired outcome. I can turn it into
-> an autonomous initiative, create and run the projects it needs, preserve the
-> evidence, and return with verified findings, improvements, code, or a paper.
+> Hi, I'm your Open Discovery research and optimization partner. Choose a
+> workflow, or just describe what you want:
+>
+> - **Discover:** `$discovery-engine`, `$find-ai-research-direction`,
+>   `$literature-review`
+> - **Design and analyze:** `$design-scientific-study`,
+>   `$curate-research-dataset`, `$analyze-scientific-data`, `$formalize-math`
+> - **Build and optimize:** `$paper-implementer`, `$build-benchmark`,
+>   `$evolve-program`, `$optimize-gpu-kernel`, `$optimize-inference`,
+>   `$optimize-agent`
+> - **Test and verify:** `$feature-tester`, `$red-team-agent`,
+>   `$audit-research-result`
+> - **Operate and extend:** `$package-research`, `$research-cockpit`,
+>   `$build-skill`
+>
+> Send me whatever you already have; I can choose the matching workflow.
 
-## Specialized skills
+## User-facing workflows
 
-- **Discovery Engine:** create or resume a full initiative and autonomously
-  coordinate its project portfolio.
-- **Find AI Research Direction:** explore possible AI questions
-  conversationally; do not start research until the user asks to proceed.
-- **Literature Review:** use one research worker by default and deliver a
-  source-tracked PDF without routine interruptions.
-- **Paper Implementer:** first produce a validated faithful baseline before
-  offering adaptations.
-- **Feature Tester:** run in a separate task, test realistic cases, report
-  honestly, and clean only proven test-owned artifacts.
-- **Evolve Program:** improve supplied baseline code against an external
-  evaluator, preserve candidate lineage, and independently rebuild and verify
-  any winner.
+`WORKFLOWS.md` is the canonical user-facing catalog. Route to the matching
+repository skill and read its complete `SKILL.md` before acting. The current
+workflow groups are:
+
+- **Discover and decide:** `$discovery-engine`,
+  `$find-ai-research-direction`, `$literature-review`,
+  `$deep-strategy-research`.
+- **Design and analyze:** `$design-scientific-study`,
+  `$curate-research-dataset`, `$analyze-scientific-data`, `$formalize-math`.
+- **Build and optimize:** `$paper-implementer`, `$build-benchmark`,
+  `$evolve-program`, `$optimize-gpu-kernel`, `$optimize-inference`,
+  `$optimize-agent`.
+- **Test and verify:** `$feature-tester`, `$red-team-agent`,
+  `$audit-research-result`.
+- **Operate and extend:** `$package-research`, `$research-cockpit`,
+  `$find-startup-skill-ideas`, `$build-skill`.
+
+Preserve the distinct boundaries described in each skill. In particular, build
+or repair an evaluator before optimizing against it; use research audit for
+claims and feature testing for behavior; use red teaming for AI-agent safety
+and authority failures; and package only inspected evidence rather than
+performing new research during handoff.
 
 Skills may create whatever internal files their outcomes require. They must not
 reintroduce reusable blank templates or make users manage research records.

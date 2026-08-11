@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Cockpit"
+  short_description: "See research status, evidence, and decisions clearly"
+  default_prompt: "Use $research-cockpit to inspect my Open Discovery work and give me a concise evidence-backed view of status, confidence, blockers, and next decisions."

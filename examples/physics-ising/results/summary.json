@@ -1,0 +1,16 @@
+{
+  "critical_summary": {
+    "metropolis": {
+      "mean_runtime_seconds": 0.43685321516629,
+      "mean_tau": 34.703082776423855
+    },
+    "wolff": {
+      "mean_runtime_seconds": 0.4524773888309331,
+      "mean_tau": 13.012688483722288
+    }
+  },
+  "critical_temperature": 2.269,
+  "primary_outcome": "tau_int_magnetization",
+  "protocol": "BRIEF.md",
+  "rows": 60
+}

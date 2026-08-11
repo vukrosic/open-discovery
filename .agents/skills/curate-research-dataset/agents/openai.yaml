@@ -1,0 +1,4 @@
+interface:
+  display_name: "Curate Research Dataset"
+  short_description: "Build trustworthy reproducible research datasets"
+  default_prompt: "Use $curate-research-dataset to turn these source data and intended research use into a trustworthy reproducible dataset package."

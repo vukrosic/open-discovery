@@ -1,36 +1,73 @@
 # Open Discovery
 
-Open Discovery is an open-source research and algorithm-optimization harness
-for coding agents. It turns one human idea, question, or system to improve into
-an autonomous initiative containing as many independent projects as the work
-needs.
+Open Discovery is a free, open-source collection of research and optimization
+workflows for coding agents. It turns one human idea, question, paper, feature,
+or system to improve into evidence-producing work.
 
-Our goal is to automate scientific discovery, engineering experimentation, and
-algorithm optimization—from a question, hypothesis, or measured bottleneck
-through independent investigations, execution, evidence, and reproducible
-results. We are looking to raise capital to scale development, hosted
-execution, and compute while keeping the core open-source.
+Our immediate goal is to collect and design useful, fully digital experiments
+across science and engineering. We are building the library of questions,
+protocols, measurements, and evidence standards first. The next stage is an
+autonomous harness that can run these experiments, solve them, or search for
+improvements without losing track of what it actually proved.
 
-I am also looking for technical cofounders who want to apply to Y Combinator
-and build Open Discovery with me — people who can conduct scientific research or build systems.
+The clearest product today is simple: open Open Discovery in Codex, Claude
+Code, or another capable coding agent; provide code plus a benchmark; and let
+the agent search for verified improvements. The repository and workflows are
+free. We will consider hosted execution only after real usage shows which
+operational problems people repeatedly need solved.
 
-## Start
+## Install
 
-Open this repository with Codex, Claude, or another file-capable agent and say:
+```bash
+git clone https://github.com/vukrosic/open-discovery.git
+cd open-discovery
+```
 
-`Investigate ways to make small language models faster on my MacBook.`
+Open the cloned folder in Codex or start Claude Code from that folder. No Open
+Discovery server or package installation is required; individual workflows may
+use project-local dependencies when their task needs them.
 
-`Optimize this algorithm without changing its outputs: ...`
+## Choose a workflow
 
-`Try to solve or make progress on this mathematics problem: ...`
+Open this repository with a file-capable coding agent and choose a workflow:
 
-`Reproduce this paper: ...`
+- **Discover:** `$discovery-engine`, `$find-ai-research-direction`,
+  `$literature-review`, `$deep-strategy-research`
+- **Design and analyze:** `$design-scientific-study`,
+  `$curate-research-dataset`, `$analyze-scientific-data`, `$formalize-math`
+- **Build and optimize:** `$paper-implementer`, `$build-benchmark`,
+  `$evolve-program`, `$optimize-gpu-kernel`, `$optimize-inference`,
+  `$optimize-agent`
+- **Test and verify:** `$feature-tester`, `$red-team-agent`,
+  `$audit-research-result`
+- **Operate and extend:** `$package-research`, `$research-cockpit`,
+  `$find-startup-skill-ideas`, `$build-skill`
 
-`Review the literature on ... and write a PDF report.`
+See [all workflows and examples](WORKFLOWS.md), or simply describe what you
+want in ordinary language. For example:
 
-`Choose a worthwhile AI research direction and pursue it autonomously.`
+> Optimize this code without changing its outputs. `pytest` must pass and
+> `python benchmark.py` should become faster.
 
 ## Examples
+
+### Current autonomous experiments
+
+These small examples show the kinds of computer-only experiments Open
+Discovery is collecting and designing:
+
+- **[Algorithm optimization](examples/algorithm-optimization/README.md):** try
+  a new version of an algorithm and measure whether it is faster while still
+  giving the right answer.
+- **[Computational biology](examples/computational-biology/README.md):** test
+  a data-analysis method on gene-like data and check whether its predictions
+  improve.
+- **[2D Ising physics simulation](examples/physics-ising/README.md):** simulate
+  a simple magnetic system and compare two computer methods for sampling it.
+
+Each example keeps the question, protocol, code, measurements, and generated
+results together. These are digital demonstrations, not claims about real
+materials, patients, or production systems.
 
 [Qwen3 Prompt Lookup Robustness](https://github.com/vukrosic/qwen3-prompt-lookup-robustness)
 is a research repository produced by AI agents using Open Discovery. The system autonomously investigated how to run Qwen3-0.6B faster
@@ -83,10 +120,15 @@ Discovery deliberately has no blank research templates and no fixed runtime.
 ## What the harness provides
 
 - [`AGENTS.md`](AGENTS.md) — the harness's operating behavior
+- [`WORKFLOWS.md`](WORKFLOWS.md) — user-facing workflow catalog and examples
 - [`agents/`](agents/) — research hierarchy, review, communication, and
   repository-artifact prompts
 - [`.agents/skills/`](.agents/skills/) — autonomous research and focused skills
+- [`skill-lab/`](skill-lab/) — experimental skills loaded explicitly by path
 - [`docs/`](docs/) — evidence, collaboration, and operating guidance
+- [`docs/AUTO-LAB.md`](docs/AUTO-LAB.md) — full computer-cycle auto-lab rule
+- [`docs/AUTO-LAB-TEST-CASES.md`](docs/AUTO-LAB-TEST-CASES.md) — digital
+  closed-loop dogfood case specs (runs stay out of git)
 - [`research-modes/`](research-modes/) — optional field-specific guidance
 
 The harness provides prompts, responsibility boundaries, evidence standards,
@@ -96,7 +138,9 @@ code they need.
 For a continuing multi-initiative lab, local ignored files such as
 `lab/MISSION.md` and `lab/CONSTRAINTS.md` can define that lab's purpose and
 resource limits. They configure one lab instance and do not change Open
-Discovery's general behavior for other researchers.
+Discovery's general behavior for other researchers. This workspace lab binds
+the auto-lab computer-only rule there; live initiatives under `initiatives/`
+remain gitignored.
 
 ## Default autonomy
 

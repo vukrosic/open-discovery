@@ -1,0 +1,35 @@
+{
+  "candidate": "candidate-004",
+  "command": "python3 evaluator.py candidates/candidate-004/solution.py",
+  "evaluator_exit_code": 0,
+  "result": {
+    "failures": [
+      "performance gate not met: median improvement < 15%"
+    ],
+    "improved": false,
+    "metrics": {
+      "candidate_median_seconds": 0.009765625,
+      "candidate_relative_mad": 0.010576999187469483,
+      "median_improvement": -0.5343158636962002,
+      "paired_improvements": [
+        -0.5944042045546356,
+        -0.5343158636962002,
+        -0.5353690718208348,
+        -0.19258142664849376,
+        -0.5163917423667239,
+        -0.4855436477549384,
+        -0.5411743826508162
+      ],
+      "reference_median_seconds": 0.006348000024445355,
+      "reference_relative_mad": 0.01329159278001273
+    },
+    "objective": {
+      "baseline_value": 0.0,
+      "direction": "maximize",
+      "name": "runtime_improvement",
+      "value": -0.5343158636962002
+    },
+    "status": "FAILED",
+    "valid": true
+  }
+}

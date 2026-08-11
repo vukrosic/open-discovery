@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Agent"
+  short_description: "Improve agents with protected evaluations"
+  default_prompt: "Use $optimize-agent to improve this agent against trustworthy evaluations and verify any winner."

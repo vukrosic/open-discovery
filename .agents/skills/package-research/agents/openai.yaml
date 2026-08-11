@@ -1,0 +1,4 @@
+interface:
+  display_name: "Package Research"
+  short_description: "Package research as a runnable local repository"
+  default_prompt: "Use $package-research to turn these inspected research artifacts into one clear, runnable, GitHub-ready local repository package."

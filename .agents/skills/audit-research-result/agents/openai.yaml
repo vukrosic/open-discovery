@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Research Result"
+  short_description: "Independently audit evidence behind a result"
+  default_prompt: "Use $audit-research-result to inspect this result independently and judge what the evidence actually supports."

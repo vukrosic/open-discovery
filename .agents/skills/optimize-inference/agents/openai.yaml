@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Inference"
+  short_description: "Optimize inference for a target workload"
+  default_prompt: "Use $optimize-inference to optimize this model or inference application for my workload and hardware without reducing output quality."
