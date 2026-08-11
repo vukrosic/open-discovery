@@ -129,6 +129,10 @@ Discovery deliberately has no blank research templates and no fixed runtime.
 - [`docs/AUTO-LAB.md`](docs/AUTO-LAB.md) — full computer-cycle auto-lab rule
 - [`docs/AUTO-LAB-TEST-CASES.md`](docs/AUTO-LAB-TEST-CASES.md) — digital
   closed-loop dogfood case specs (runs stay out of git)
+- [`docs/EXPERIMENT-CATALOG.md`](docs/EXPERIMENT-CATALOG.md) — experiment
+  families and example tasks users and companies can set
+- [`docs/EXPERIMENT-CONTRACT.md`](docs/EXPERIMENT-CONTRACT.md) — the seven
+  questions every experiment must answer
 - [`research-modes/`](research-modes/) — optional field-specific guidance
 
 The harness provides prompts, responsibility boundaries, evidence standards,

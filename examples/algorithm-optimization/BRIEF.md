@@ -1,40 +1,43 @@
-# AL-01: Graph connected-components optimization
+# Algorithm optimization experiment
 
-## Question
+## 1. What question is being asked?
 
-Can an agent make connected-component detection faster without changing its
-exact output?
+Can an agent generate a faster implementation of connected-component
+detection without changing its exact output?
 
-## Baseline
+## 2. What inputs and permissions exist?
 
-`baseline.py` is the immutable reference implementation. Candidate work lives
-under `candidates/candidate-NNN/solution.py` and must expose the same function:
+The input is a graph with `n` vertices and an edge list. `baseline.py`, the
+fixtures, and the evaluator are available as the reference. The work is fully
+digital and has no external access, network, or wet-lab step. The baseline and
+earlier candidates are read-only.
 
-```python
-connected_components(n: int, edges: list[tuple[int, int]]) -> list[list[int]]
-```
+## 3. What can be changed?
 
-Each component must be sorted, and components must be ordered by their lowest
-vertex. Vertices are numbered `0..n-1`.
+The agent may create new implementations under
+`candidates/candidate-NNN/solution.py` with the same
+`connected_components(n, edges)` interface. It may not overwrite the baseline,
+the evaluator, fixtures, or an earlier candidate.
 
-## Frozen evaluation
+## 4. How is success measured?
 
-The evaluator owns the fixtures and correctness checks. It must not be edited
-by the candidate. A candidate passes only if:
+The candidate must exactly match the baseline on every fixture and have any
+positive paired median runtime improvement on the large fixture. Correctness
+failure rejects the candidate. Unstable timing is reported as
+`STOCHASTIC-OPEN`, not as an improvement.
 
-1. output is exactly equal to the baseline on every fixture; and
-2. paired median measured runtime improves by any positive amount on the large
-   fixture.
+## 5. What evidence was produced?
 
-If timing variance prevents a stable conclusion, report `STOCHASTIC-OPEN`
-instead of making a performance claim.
-If correctness fails, reject the candidate regardless of speed.
+Each candidate preserves its source, notes, and structured `RESULT.json` with
+correctness checks, timings, and the final decision.
 
-## Scope
+## 6. What is missing or uncertain?
 
-This is a fully digital, deterministic optimization case. No external access,
-network, wet-lab work, or scientific claim is involved. Never overwrite the
-baseline or an earlier candidate.
+The benchmark is a bounded graph fixture, so a measured speedup may not
+generalize to other graph sizes, shapes, hardware, or workloads.
 
-Candidate history follows
-[`docs/CANDIDATE-LIFECYCLE.md`](../../docs/CANDIDATE-LIFECYCLE.md).
+## 7. When must the agent stop and ask a human?
+
+Stop if the required interface, evaluator, fixtures, or comparison procedure is
+missing or materially unclear. Do not invent a reproduction or change the
+reference to make a candidate pass.

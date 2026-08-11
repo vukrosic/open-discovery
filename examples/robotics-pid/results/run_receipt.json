@@ -1,0 +1,24 @@
+{
+  "command": "python3 experiment.py",
+  "outputs": [
+    "results.csv",
+    "tuning_grid.csv",
+    "summary.json",
+    "trajectory.svg",
+    "rmse_comparison.svg",
+    "run_receipt.json"
+  ],
+  "parameters": {
+    "damping": 1.2,
+    "development_episode_count": 2,
+    "dt_s": 0.01,
+    "grid_size": 27,
+    "holdout_episode_count": 3,
+    "horizon_steps": 500,
+    "inertia": 1.0,
+    "torque_limit": 8.0
+  },
+  "protocol_sha256": "d501b2d1866492da0317f8d6f73f92a7bfa9b781905b0fdd09dbb9d73d4c61a6",
+  "python": "3.13.7",
+  "status": "COMPLETE"
+}

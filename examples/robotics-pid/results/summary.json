@@ -1,0 +1,59 @@
+{
+  "baseline_gains": {
+    "kd": 0.15,
+    "ki": 1.0,
+    "kp": 4.0
+  },
+  "claim_boundary": "Finite comparison on the frozen simulated plant and episodes only; no hardware or optimality claim.",
+  "decision": "PASS",
+  "development": {
+    "baseline": {
+      "energy": 10.100445691634395,
+      "episode_count": 2,
+      "overshoot": 0.45810497491959623,
+      "rmse": 0.3596316301277648,
+      "settling_time": 5.0,
+      "stable": true,
+      "stable_episodes": 2
+    },
+    "searched": {
+      "energy": 12.9551913606823,
+      "episode_count": 2,
+      "overshoot": 0.34603167609173613,
+      "rmse": 0.3082953627059418,
+      "settling_time": 4.765000000000001,
+      "stable": true,
+      "stable_episodes": 2
+    }
+  },
+  "holdout": {
+    "baseline": {
+      "energy": 10.432157396023612,
+      "episode_count": 3,
+      "overshoot": 0.47111746345715466,
+      "rmse": 0.36172039804120665,
+      "settling_time": 5.0,
+      "stable": true,
+      "stable_episodes": 3
+    },
+    "searched": {
+      "energy": 13.542487414896149,
+      "episode_count": 3,
+      "overshoot": 0.37126820082532325,
+      "rmse": 0.31023338907920134,
+      "settling_time": 4.08,
+      "stable": true,
+      "stable_episodes": 3
+    }
+  },
+  "holdout_rmse_improvement_rad": 0.05148700896200531,
+  "primary_metric": "mean_holdout_rmse_rad",
+  "question": "Does a small automatic PID gain search improve hold-out tracking on a simulated one-joint arm?",
+  "rows": 10,
+  "selected_gains": {
+    "kd": 0.3,
+    "ki": 0.4,
+    "kp": 5.5
+  },
+  "tuning_rows": 27
+}
