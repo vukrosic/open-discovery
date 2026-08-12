@@ -1,5 +1,19 @@
 # Open Discovery
 
+## Auto-optimize any code
+
+The `auto-optimize` skill helps a coding agent optimize any system, algorithm,
+or codebase to run faster while preserving correctness and measuring the real
+hardware/workload tradeoffs.
+
+Copy and paste this prompt into your coding agent:
+
+> Install and use the `auto-optimize` skill from this repository:
+>
+> https://github.com/vukrosic/open-discovery/blob/main/.agents/skills/auto-optimize/SKILL.md
+>
+> Read it and start.
+
 Open Discovery is a free, open-source collection of research and optimization
 workflows for coding agents. It turns one human idea, question, paper, feature,
 or system to improve into evidence-producing work.
