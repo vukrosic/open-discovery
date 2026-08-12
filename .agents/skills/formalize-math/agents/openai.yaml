@@ -1,4 +1,0 @@
-interface:
-  display_name: "Formalize Math"
-  short_description: "Formalize and machine-check mathematical claims"
-  default_prompt: "Use $formalize-math to translate this mathematical claim into a faithful formal statement and verify it with an available proof assistant."

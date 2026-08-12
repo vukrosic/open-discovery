@@ -1,4 +1,0 @@
-interface:
-  display_name: "Red Team Agent"
-  short_description: "Stress-test AI agents and authority boundaries"
-  default_prompt: "Use $red-team-agent to adversarially test this AI agent behavior and produce demonstrated failures plus a reusable regression suite."

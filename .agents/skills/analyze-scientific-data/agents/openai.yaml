@@ -1,4 +1,0 @@
-interface:
-  display_name: "Analyze Scientific Data"
-  short_description: "Reproducible scientific analysis with safeguards"
-  default_prompt: "Use $analyze-scientific-data to answer this research question from the supplied data with reproducible analysis, checked outputs, uncertainty, and limitations."
