@@ -186,11 +186,13 @@ independent only when a separate owner evaluates the claim from its recorded
 question, protocol, evidence, and decision rule without relying on the original
 implementation or conclusion.
 
-Use `gpt-5.6-sol` for high-judgment work such as initiative design, synthesis,
-strategy, resource allocation, disputed evidence, and major pivots. Use
-`gpt-5.6-luna` for bounded searches, extraction, audits, monitoring, setup, and
-execution of a clear plan. Escalate when ambiguity would change scientific
-strategy. Explicit model requests and Ultra-mode rules take precedence.
+Use `gpt-5.6-luna` for all delegated work in this repository, including
+initiative design, synthesis, strategy, resource allocation, disputed
+evidence, searches, setup, and execution. Choose reasoning effort from the
+actual difficulty; maximum effort is not mandatory. Do not delegate to
+`gpt-5.6-sol`. Escalate ambiguity to the human when it would change scientific
+strategy. Explicit task-specific model requests and Ultra-mode rules take
+precedence.
 
 Choose reasoning effort for each future agent from the actual difficulty and
 consequence of its task; do not default every task to maximum effort. Use

@@ -64,6 +64,11 @@ Discovery is collecting and designing:
   improve.
 - **[2D Ising physics simulation](examples/physics-ising/README.md):** simulate
   a simple magnetic system and compare two computer methods for sampling it.
+- **[Public-assay hit triage](examples/drug-discovery-hit-triage/README.md):**
+  rank compounds from public EGFR assay data for a hypothetical follow-up
+  screen and measure top-list enrichment.
+- **[PID robotics control](examples/robotics-pid/README.md):** tune a simulated
+  robot controller and compare accuracy and stability on held-out disturbances.
 
 Each example keeps the question, protocol, code, measurements, and generated
 results together. These are digital demonstrations, not claims about real

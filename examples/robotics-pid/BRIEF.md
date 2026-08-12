@@ -21,6 +21,10 @@ The agent may search the gain grid `Kp ∈ {2.5,4.0,5.5}`,
 controller candidate. The plant, episodes, baseline gains, and holdout data
 remain fixed for the comparison.
 
+The candidate interface is a new `candidates/candidate-NNN/solution.py`
+defining `choose_gains(dev_episodes, score)`. The evaluator exposes only the
+development episodes and scorer; it keeps holdout episodes evaluator-owned.
+
 ## 4. How is success measured?
 
 The primary measure is mean holdout angle RMSE. A candidate succeeds only if it

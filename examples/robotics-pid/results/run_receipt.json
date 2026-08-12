@@ -18,7 +18,7 @@
     "inertia": 1.0,
     "torque_limit": 8.0
   },
-  "protocol_sha256": "d501b2d1866492da0317f8d6f73f92a7bfa9b781905b0fdd09dbb9d73d4c61a6",
+  "protocol_sha256": "548de2f2dad55d2e84f312dcc1d897c406643973175fc7db9ebea29d39f618f9",
   "python": "3.13.7",
   "status": "COMPLETE"
 }

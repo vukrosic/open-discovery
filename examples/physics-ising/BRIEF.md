@@ -17,8 +17,9 @@ network, or physical measurement.
 
 The experiment compares the Metropolis and Wolff sampler implementations under
 the recorded lattice, temperature, burn-in, and sampling settings. A future
-candidate may change the sampler or numerical implementation, but not silently
-change the comparison inputs.
+candidate is a new `candidates/candidate-NNN/solution.py` defining
+`step(model)`, and may change the sampler or numerical implementation, but not
+silently change the comparison inputs.
 
 ## 4. How is success measured?
 

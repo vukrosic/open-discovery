@@ -8,14 +8,16 @@ Never overwrite the baseline or an earlier candidate.
 See the general [candidate lifecycle rules](../../docs/CANDIDATE-LIFECYCLE.md)
 for ancestry, one-character changes, and preserving failed candidates.
 
-The harness has **not** been run as part of adding this fixture. When it is
-ready for an authorized run, use:
+No agent benchmark is included in this repository change. For an authorized
+candidate run, use:
 
 ```bash
-python3 evaluator.py candidates/candidate-001/solution.py
+python3 evaluator.py candidates/candidate-001/solution.py \
+  --evidence-dir candidates/candidate-001/evidence
 ```
 
-The evaluator prints one JSON result. The result is only a performance claim
-if all correctness fixtures pass and paired median runtime on the large
-fixture shows any stable positive improvement. A noisy timing comparison is reported as
-`STOCHASTIC-OPEN` rather than as a win or a failure.
+Copy `candidate_template.py` into a new candidate directory before editing it.
+The evaluator never writes the baseline or an earlier candidate. It prints one
+structured JSON result with `status` equal to `PASS`, `FAIL`, or `BLOCKED`, and
+the fresh evidence directory contains the same `RESULT.json`. A noisy timing
+comparison is `BLOCKED` (human review is needed), not an improvement claim.

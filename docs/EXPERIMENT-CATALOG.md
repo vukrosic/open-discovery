@@ -72,6 +72,8 @@ Examples:
 - “Does this molecule rank well in a virtual screen?”
 - “Can this controller reduce energy use in the simulator?”
 - “Does this public omics method separate the two cohorts?”
+- “Can this virtual-screening method enrich active compounds in the top 100
+  candidates for a follow-up assay?”
 - “Can you reproduce the central table from this paper or company claim?”
 
 ## Shared contract

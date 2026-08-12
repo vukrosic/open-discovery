@@ -98,11 +98,25 @@ def result(
     status: str,
     metrics: dict | None = None,
     failures: list[str] | None = None,
+    candidate_path: Path | None = None,
+    evidence_paths: list[str] | None = None,
 ) -> dict:
+    # Keep the historical detail while exposing one stable benchmark status.
+    # A noisy timing run is not a failure of the implementation; it is
+    # evidence that the frozen comparison needs human review.
+    public_status = {
+        "SUPPORTED": "PASS",
+        "FAILED": "FAIL",
+        "STOCHASTIC-OPEN": "BLOCKED",
+    }.get(status, "BLOCKED")
     return {
+        "schema_version": 3,
         "valid": valid,
         "improved": improved,
-        "status": status,
+        "status": public_status,
+        "detail_status": status,
+        "candidate": str(candidate_path) if candidate_path else None,
+        "evidence_paths": evidence_paths or [],
         "objective": {
             "name": "runtime_improvement",
             "value": (metrics or {}).get("median_improvement", 0.0),
@@ -200,15 +214,39 @@ def evaluate(candidate_path: Path) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("candidate", type=Path)
+    parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        help="fresh directory in which to preserve RESULT.json",
+    )
     args = parser.parse_args()
+    candidate_path = args.candidate.resolve()
     try:
-        evaluation = evaluate(args.candidate.resolve())
+        evaluation = evaluate(candidate_path)
+        evaluation["candidate"] = str(candidate_path)
     except Exception as error:
+        detail = "BLOCKED" if isinstance(error, (FileNotFoundError, PermissionError)) else "FAIL"
         evaluation = result(
             valid=False,
             improved=False,
-            status="FAILED",
+            status="STOCHASTIC-OPEN" if detail == "BLOCKED" else "FAILED",
             failures=[f"evaluation failed: {type(error).__name__}: {error}"],
+            candidate_path=candidate_path,
         )
+    if args.evidence_dir is not None:
+        evidence_dir = args.evidence_dir.resolve()
+        if evidence_dir.exists() and (not evidence_dir.is_dir() or any(evidence_dir.iterdir())):
+            evaluation = result(
+                valid=False,
+                improved=False,
+                status="STOCHASTIC-OPEN",
+                failures=["evidence directory already exists; refusing to overwrite"],
+                candidate_path=candidate_path,
+            )
+        else:
+            evidence_dir.mkdir(parents=True, exist_ok=True)
+            result_path = evidence_dir / "RESULT.json"
+            evaluation["evidence_paths"] = [str(candidate_path), str(result_path)]
+            result_path.write_text(json.dumps(evaluation, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(evaluation, sort_keys=True))
     raise SystemExit(0)

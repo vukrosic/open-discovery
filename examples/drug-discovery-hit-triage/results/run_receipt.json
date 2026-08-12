@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "elapsed_seconds": 1.5799808502197266,
+  "snapshot_sha256": "21827e71497e3de61fefcc962c5deb7248cde5ea2e38c92212129086d98200ab",
+  "outputs": [
+    "activity_snapshot.csv",
+    "enrichment.svg",
+    "rankings.csv",
+    "run_receipt.json",
+    "summary.json"
+  ]
+}

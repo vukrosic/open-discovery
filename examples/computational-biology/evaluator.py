@@ -100,12 +100,22 @@ def evaluate_stage(
 
 
 def result(status: str, valid: bool, improved: bool, stages: dict | None = None,
-           failures: list[str] | None = None, confirmation_sha256: str | None = None) -> dict:
+           failures: list[str] | None = None, confirmation_sha256: str | None = None,
+           candidate_path: Path | None = None,
+           evidence_paths: list[str] | None = None) -> dict:
+    public_status = {
+        "SUPPORTED": "PASS",
+        "FAILED": "FAIL",
+        "ROBUSTNESS_FAILED": "FAIL",
+    }.get(status, "BLOCKED")
     return {
-        "schema_version": 2,
-        "status": status,
+        "schema_version": 3,
+        "status": public_status,
+        "detail_status": status,
         "valid": valid,
         "improved": improved,
+        "candidate": str(candidate_path) if candidate_path else None,
+        "evidence_paths": evidence_paths or [],
         "stages": stages or {},
         "artifacts_preserved": list(REQUIRED_ARTIFACTS),
         "confirmation_sha256": confirmation_sha256,
@@ -143,10 +153,12 @@ if __name__ == "__main__":
     parser.add_argument("--confirmation-bundle", required=True, type=Path)
     parser.add_argument("--artifacts-dir", required=True, type=Path)
     args = parser.parse_args()
+    candidate_path = args.candidate.resolve()
+    artifact_root = args.artifacts_dir.resolve()
     try:
-        artifact_root = args.artifacts_dir.resolve()
-        if artifact_root.exists():
+        if artifact_root.exists() and (not artifact_root.is_dir() or any(artifact_root.iterdir())):
             raise FileExistsError("artifacts directory already exists; refusing to overwrite")
+        artifact_root.mkdir(parents=True, exist_ok=True)
         confirmation, digest = load_confirmation(args.confirmation_bundle.resolve())
         stages = {
             "development": evaluate_stage(
@@ -157,8 +169,31 @@ if __name__ == "__main__":
             ),
         }
         status, failures = gate(stages)
-        evaluation = result(status, True, status == "SUPPORTED", stages, failures, digest)
+        evaluation = result(
+            status, True, status == "SUPPORTED", stages, failures, digest,
+            candidate_path=candidate_path,
+        )
     except Exception as error:
-        evaluation = result("FAILED", False, False, failures=[f"evaluation failed: {type(error).__name__}: {error}"])
+        blocked = isinstance(error, (FileNotFoundError, FileExistsError, PermissionError))
+        evaluation = result(
+            "BLOCKED" if blocked else "FAILED",
+            False,
+            False,
+            failures=[f"evaluation failed: {type(error).__name__}: {error}"],
+            candidate_path=candidate_path,
+        )
+    artifact_root.mkdir(parents=True, exist_ok=True)
+    result_path = artifact_root / "RESULT.json"
+    evidence_paths = [str(candidate_path), str(artifact_root), str(args.confirmation_bundle.resolve())]
+    if not result_path.exists():
+        evaluation["evidence_paths"] = evidence_paths + [str(result_path)]
+        result_path.write_text(json.dumps(evaluation, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    else:
+        evaluation = result(
+            "BLOCKED", False, False,
+            failures=["evidence result already exists; refusing to overwrite"],
+            candidate_path=candidate_path,
+            evidence_paths=evidence_paths + [str(result_path)],
+        )
     print(json.dumps(evaluation, sort_keys=True))
     raise SystemExit(0)

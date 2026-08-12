@@ -35,3 +35,18 @@ The script uses only Python's standard library and writes checked artifacts to
 The result is only evidence about this specified simulated arm and these
 frozen episodes. It is not a hardware-safety, physical-robot, or optimality
 claim.
+
+For agent optimization, copy `candidate_template.py` to
+`candidates/candidate-NNN/solution.py` and implement
+`choose_gains(dev_episodes, score)`. Run the frozen evaluator with a fresh
+evidence directory:
+
+```bash
+mkdir -p candidates/candidate-001
+cp candidate_template.py candidates/candidate-001/solution.py
+python3 evaluator.py candidates/candidate-001/solution.py \
+  --evidence-dir candidates/candidate-001/evidence
+```
+
+The evaluator never exposes hold-out labels to the candidate. It emits
+structured `PASS`, `FAIL`, or `BLOCKED` JSON and preserves `RESULT.json`.

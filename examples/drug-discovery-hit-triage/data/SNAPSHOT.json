@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "target": "CHEMBL203",
+  "target_name": "human epidermal growth factor receptor",
+  "source": "ChEMBL activity API",
+  "query": {
+    "target_chembl_id": "CHEMBL203",
+    "standard_type": "IC50",
+    "standard_units": "nM",
+    "page_limit": 1000,
+    "max_pages": 4
+  },
+  "file": "activity_snapshot.csv",
+  "sha256": "21827e71497e3de61fefcc962c5deb7248cde5ea2e38c92212129086d98200ab",
+  "rows": 2022,
+  "note": "Pinned public snapshot for repeatable candidate evaluation; live retrieval is not part of the evaluator."
+}

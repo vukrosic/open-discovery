@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<rect width="100%" height="100%" fill="white"/><text x="380" y="35" text-anchor="middle" font-size="21">EGFR top-25 enrichment</text>
+<line x1="120" y1="330" x2="650" y2="330" stroke="#333"/><line x1="120" y1="80" x2="120" y2="330" stroke="#333"/>
+<text x="35" y="210" transform="rotate(-90 35 210)" text-anchor="middle" font-size="16">Enrichment factor</text><rect x="180" y="111.8" width="120" height="218.2" fill="#777777"/><text x="240" y="360" text-anchor="middle" font-size="16">baseline</text><text x="240" y="103.8" text-anchor="middle" font-size="15">1.00x</text><rect x="410" y="80.0" width="120" height="250.0" fill="#1769aa"/><text x="470" y="360" text-anchor="middle" font-size="16">similarity</text><text x="470" y="72.0" text-anchor="middle" font-size="15">1.15x</text>
+<text x="380" y="405" text-anchor="middle" font-size="14">Historical ChEMBL snapshot; computational ranking only</text></svg>

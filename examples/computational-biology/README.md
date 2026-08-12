@@ -17,6 +17,8 @@ real biology.
 - `evaluator.py` runs development and post-freeze confirmation checks.
 - `make_confirmation_bundle.py` creates a fresh confirmation cohort only after
   a candidate has been frozen.
+- `candidate_template.py` is the minimal `analyze(train_rows, test_rows,
+  output_dir)` starting point for a new candidate.
 - `candidates/candidate-001/` is the completed supported experiment, including
   its code, result, confirmation receipt, tables, and figures.
 
@@ -42,3 +44,9 @@ The stored confirmation receipt proves that this seed was revealed only after
 the candidate was frozen and evaluated. A future candidate would require a new
 random bundle. The child pipeline receives no confirmation labels. This is
 practical process isolation, not a hardened hostile-code sandbox.
+
+The evaluator is the candidate interface: copy `candidate_template.py` into a
+fresh `candidates/candidate-NNN/solution.py`, then run the command above with a fresh
+artifacts directory. It never edits the baseline, fixtures, evaluator, or
+confirmation bundle. Its JSON result and `artifacts/RESULT.json` use the common
+`PASS`, `FAIL`, or `BLOCKED` status and include evidence paths.

@@ -1,0 +1,42 @@
+{
+  "target": "CHEMBL203",
+  "target_name": "human epidermal growth factor receptor",
+  "query_urls": [
+    "pinned:/Users/vukrosic/my-life/open-discovery-workspace/open-discovery/examples/drug-discovery-hit-triage/data/activity_snapshot.csv"
+  ],
+  "n_records": 2022,
+  "train": 1711,
+  "holdout": 311,
+  "temporal_cutoff_year": 2006,
+  "active_threshold_pchembl": 6.5,
+  "primary_metric": "enrichment_factor_at_k",
+  "top_k": 25,
+  "baseline": {
+    "method": "baseline",
+    "n_train": 1711,
+    "n_holdout": 311,
+    "active_train": 857,
+    "active_holdout": 228,
+    "top_k": 25,
+    "hits_at_k": 18.327974276527332,
+    "precision_at_k": 0.7331189710610932,
+    "recall_at_k": 0.08038585209003216,
+    "enrichment_factor_at_k": 1.0,
+    "roc_auc": 0.5
+  },
+  "candidate": {
+    "method": "similarity",
+    "n_train": 1711,
+    "n_holdout": 311,
+    "active_train": 857,
+    "active_holdout": 228,
+    "top_k": 25,
+    "hits_at_k": 21,
+    "precision_at_k": 0.84,
+    "recall_at_k": 0.09210526315789473,
+    "enrichment_factor_at_k": 1.1457894736842105,
+    "roc_auc": 0.6553846966814627
+  },
+  "decision": "PASS",
+  "claim_boundary": "historical public EGFR ranking on this temporal split; no wet-lab or clinical claim"
+}

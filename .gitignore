@@ -14,6 +14,9 @@
 /test-runs/
 /tmp/
 
+# Local cloned repositories and generated optimization runs
+/benchmark-lab/
+
 # Experimental skill prototypes and evaluation artifacts
 /skill-lab/
 
